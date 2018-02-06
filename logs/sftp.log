@@ -1,0 +1,221 @@
+Feb  6 12:07:42 10.71.50.13 u92009894 Connection from 10.71.50.13 port 14932 on 212.227.24.125 port 22
+Feb  6 12:07:45 10.71.50.13 u92009894 Accepted password for u92009894 from 10.71.50.13 port 14932 ssh2
+Feb  6 12:07:45 10.71.50.13 u92009894 Starting session: subsystem 'sftp' for u92009894 from 10.71.50.13 port 14932
+Feb  6 12:07:45 10.71.50.13 u92009894 session opened for local user u92009894 from [10.71.50.13]
+Feb  6 12:08:32 10.71.50.13 u92009894 Connection from 10.71.50.13 port 30522 on 212.227.24.125 port 22
+Feb  6 12:08:33 10.71.50.13 u92009894 Accepted password for u92009894 from 10.71.50.13 port 30522 ssh2
+Feb  6 12:08:32 10.71.50.13 u92009894 Connection from 10.71.50.13 port 30534 on 212.227.24.125 port 22
+Feb  6 12:08:33 10.71.50.13 u92009894 Accepted password for u92009894 from 10.71.50.13 port 30534 ssh2
+Feb  6 12:08:33 10.71.50.13 u92009894 Starting session: subsystem 'sftp' for u92009894 from 10.71.50.13 port 30522
+Feb  6 12:08:33 10.71.50.13 u92009894 Starting session: subsystem 'sftp' for u92009894 from 10.71.50.13 port 30534
+Feb  6 12:08:33 10.71.50.13 u92009894 session opened for local user u92009894 from [10.71.50.13]
+Feb  6 12:08:33 10.71.50.13 u92009894 session opened for local user u92009894 from [10.71.50.13]
+Feb  6 12:08:33 10.71.50.13 u92009894 open "/.env" flags READ mode 0666
+Feb  6 12:08:33 10.71.50.13 u92009894 close "/.env" bytes read 613 written 0
+Feb  6 12:08:33 10.71.50.13 u92009894 [10.71.50.13|get|0|613|0|0|0|2f2e656e76|]
+Feb  6 12:08:33 10.71.50.13 u92009894 open "/.env.example" flags READ mode 0666
+Feb  6 12:08:33 10.71.50.13 u92009894 close "/.env.example" bytes read 521 written 0
+Feb  6 12:08:33 10.71.50.13 u92009894 [10.71.50.13|get|0|521|0|0|0|2f2e656e762e6578616d706c65|]
+Feb  6 12:08:33 10.71.50.13 u92009894 open "/.gitattributes" flags READ mode 0666
+Feb  6 12:08:33 10.71.50.13 u92009894 open "/.DS_Store" flags READ mode 0666
+Feb  6 12:08:33 10.71.50.13 u92009894 close "/.gitattributes" bytes read 111 written 0
+Feb  6 12:08:33 10.71.50.13 u92009894 [10.71.50.13|get|0|111|0|0|0|2f2e67697461747472696275746573|]
+Feb  6 12:08:33 10.71.50.13 u92009894 close "/.DS_Store" bytes read 8196 written 0
+Feb  6 12:08:33 10.71.50.13 u92009894 [10.71.50.13|get|0|8196|0|0|0|2f2e44535f53746f7265|]
+Feb  6 12:08:33 10.71.50.13 u92009894 open "/.gitignore" flags READ mode 0666
+Feb  6 12:08:33 10.71.50.13 u92009894 open "/.htaccess" flags READ mode 0666
+Feb  6 12:08:33 10.71.50.13 u92009894 close "/.gitignore" bytes read 146 written 0
+Feb  6 12:08:33 10.71.50.13 u92009894 [10.71.50.13|get|0|146|0|0|0|2f2e67697469676e6f7265|]
+Feb  6 12:08:33 10.71.50.13 u92009894 close "/.htaccess" bytes read 553 written 0
+Feb  6 12:08:33 10.71.50.13 u92009894 [10.71.50.13|get|0|553|0|0|0|2f2e6874616363657373|]
+Feb  6 12:08:33 10.71.50.13 u92009894 open "/artisan" flags READ mode 0666
+Feb  6 12:08:33 10.71.50.13 u92009894 open "/composer.json" flags READ mode 0666
+Feb  6 12:08:33 10.71.50.13 u92009894 close "/artisan" bytes read 1646 written 0
+Feb  6 12:08:33 10.71.50.13 u92009894 [10.71.50.13|get|0|1646|0|0|0|2f6172746973616e|]
+Feb  6 12:08:33 10.71.50.13 u92009894 close "/composer.json" bytes read 1380 written 0
+Feb  6 12:08:33 10.71.50.13 u92009894 [10.71.50.13|get|0|1380|0|0|0|2f636f6d706f7365722e6a736f6e|]
+Feb  6 12:08:33 10.71.50.13 u92009894 open "/composer.lock" flags READ mode 0666
+Feb  6 12:08:33 10.71.50.13 u92009894 open "/favicon.ico" flags READ mode 0666
+Feb  6 12:08:33 10.71.50.13 u92009894 close "/favicon.ico" bytes read 0 written 0
+Feb  6 12:08:33 10.71.50.13 u92009894 [10.71.50.13|get|0|0|0|0|0|2f66617669636f6e2e69636f|]
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/index.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/composer.lock" bytes read 134997 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|1|134997|0|0|0|2f636f6d706f7365722e6c6f636b|]
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/index.php" bytes read 1777 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|1777|0|0|0|2f696e6465782e706870|]
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/package.json" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/phpunit.xml" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/package.json" bytes read 1063 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|1063|0|0|0|2f7061636b6167652e6a736f6e|]
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/phpunit.xml" bytes read 1043 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|1043|0|0|0|2f706870756e69742e786d6c|]
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/readme.md" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/robots.txt" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/readme.md" bytes read 3420 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|3420|0|0|0|2f726561646d652e6d64|]
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/robots.txt" bytes read 24 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|24|0|0|0|2f726f626f74732e747874|]
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/server.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/web.config" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/server.php" bytes read 563 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|563|0|0|0|2f7365727665722e706870|]
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/web.config" bytes read 914 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|914|0|0|0|2f7765622e636f6e666967|]
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/webpack.mix.js" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/webpack.mix.js" bytes read 549 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|549|0|0|0|2f7765627061636b2e6d69782e6a73|]
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/app/Console/Kernel.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/app/Console/Kernel.php" bytes read 819 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|819|0|0|0|2f6170702f436f6e736f6c652f4b65726e656c2e706870|]
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/app/Exceptions/Handler.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/app/User.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/app/Exceptions/Handler.php" bytes read 1877 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|1877|0|0|0|2f6170702f457863657074696f6e732f48616e646c65722e706870|]
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/app/User.php" bytes read 511 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|511|0|0|0|2f6170702f557365722e706870|]
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/app/Http/Kernel.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/app/Http/Kernel.php" bytes read 1983 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|1983|0|0|0|2f6170702f487474702f4b65726e656c2e706870|]
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/app/Http/Controllers/WelcomeController.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/app/Http/Controllers/WelcomeController.php" bytes read 196 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|196|0|0|0|2f6170702f487474702f436f6e74726f6c6c6572732f57656c636f6d65436f6e74726f6c6c65722e706870|]
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/app/Http/Controllers/UsersController.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/app/Http/Controllers/Controller.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/app/Http/Controllers/UsersController.php" bytes read 313 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|313|0|0|0|2f6170702f487474702f436f6e74726f6c6c6572732f5573657273436f6e74726f6c6c65722e706870|]
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/app/Http/Controllers/Controller.php" bytes read 361 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|361|0|0|0|2f6170702f487474702f436f6e74726f6c6c6572732f436f6e74726f6c6c65722e706870|]
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/app/Http/Controllers/ArticleController.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/app/Http/Controllers/ContactController.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/app/Http/Controllers/ArticleController.php" bytes read 217 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|217|0|0|0|2f6170702f487474702f436f6e74726f6c6c6572732f41727469636c65436f6e74726f6c6c65722e706870|]
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/app/Http/Controllers/ContactController.php" bytes read 670 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|670|0|0|0|2f6170702f487474702f436f6e74726f6c6c6572732f436f6e74616374436f6e74726f6c6c65722e706870|]
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/app/Http/Controllers/Auth/ResetPasswordController.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 open "/app/Http/Controllers/Auth/LoginController.php" flags READ mode 0666
+Feb  6 12:08:34 10.71.50.13 u92009894 close "/app/Http/Controllers/Auth/ResetPasswordController.php" bytes read 952 written 0
+Feb  6 12:08:34 10.71.50.13 u92009894 [10.71.50.13|get|0|952|0|0|0|2f6170702f487474702f436f6e74726f6c6c6572732f417574682f526573657450617373776f7264436f6e74726f6c6c65722e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Http/Controllers/Auth/LoginController.php" bytes read 943 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|1|943|0|0|0|2f6170702f487474702f436f6e74726f6c6c6572732f417574682f4c6f67696e436f6e74726f6c6c65722e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Http/Controllers/Auth/RegisterController.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Http/Controllers/Auth/ForgotPasswordController.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Http/Controllers/Auth/RegisterController.php" bytes read 1817 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|1817|0|0|0|2f6170702f487474702f436f6e74726f6c6c6572732f417574682f5265676973746572436f6e74726f6c6c65722e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Http/Controllers/Auth/ForgotPasswordController.php" bytes read 834 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|834|0|0|0|2f6170702f487474702f436f6e74726f6c6c6572732f417574682f466f72676f7450617373776f7264436f6e74726f6c6c65722e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Http/Middleware/TrimStrings.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Http/Middleware/VerifyCsrfToken.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Http/Middleware/TrimStrings.php" bytes read 342 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|342|0|0|0|2f6170702f487474702f4d6964646c65776172652f5472696d537472696e67732e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Http/Middleware/VerifyCsrfToken.php" bytes read 311 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|311|0|0|0|2f6170702f487474702f4d6964646c65776172652f56657269667943737266546f6b656e2e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Http/Middleware/EncryptCookies.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Http/Middleware/RedirectIfAuthenticated.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Http/Middleware/EncryptCookies.php" bytes read 300 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|300|0|0|0|2f6170702f487474702f4d6964646c65776172652f456e6372797074436f6f6b6965732e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Http/Middleware/RedirectIfAuthenticated.php" bytes read 523 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|523|0|0|0|2f6170702f487474702f4d6964646c65776172652f5265646972656374496641757468656e746963617465642e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Http/Requests/ContactRequest.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Mail/MailNewsletter.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Http/Requests/ContactRequest.php" bytes read 512 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|512|0|0|0|2f6170702f487474702f52657175657374732f436f6e74616374526571756573742e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Mail/MailNewsletter.php" bytes read 721 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|721|0|0|0|2f6170702f4d61696c2f4d61696c4e6577736c65747465722e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Providers/RouteServiceProvider.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Providers/EventServiceProvider.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Providers/RouteServiceProvider.php" bytes read 1529 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|1529|0|0|0|2f6170702f50726f7669646572732f526f7574655365727669636550726f76696465722e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Providers/EventServiceProvider.php" bytes read 596 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|596|0|0|0|2f6170702f50726f7669646572732f4576656e745365727669636550726f76696465722e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Providers/AuthServiceProvider.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Providers/BroadcastServiceProvider.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Providers/AuthServiceProvider.php" bytes read 575 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|575|0|0|0|2f6170702f50726f7669646572732f417574685365727669636550726f76696465722e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Providers/BroadcastServiceProvider.php" bytes read 380 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|380|0|0|0|2f6170702f50726f7669646572732f42726f6164636173745365727669636550726f76696465722e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/app/Providers/AppServiceProvider.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/app/Providers/AppServiceProvider.php" bytes read 403 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|403|0|0|0|2f6170702f50726f7669646572732f4170705365727669636550726f76696465722e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/bootstrap/app.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/bootstrap/app.php" bytes read 1602 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|1602|0|0|0|2f626f6f7473747261702f6170702e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/bootstrap/cache/.gitignore" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/bootstrap/autoload.php" flags READ mode 0666
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/bootstrap/cache/.gitignore" bytes read 14 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|14|0|0|0|2f626f6f7473747261702f63616368652f2e67697469676e6f7265|]
+Feb  6 12:08:35 10.71.50.13 u92009894 close "/bootstrap/autoload.php" bytes read 559 written 0
+Feb  6 12:08:35 10.71.50.13 u92009894 [10.71.50.13|get|0|559|0|0|0|2f626f6f7473747261702f6175746f6c6f61642e706870|]
+Feb  6 12:08:35 10.71.50.13 u92009894 open "/bootstrap/cache/services.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/config/view.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/bootstrap/cache/services.php" bytes read 12039 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|1|12039|0|0|0|2f626f6f7473747261702f63616368652f73657276696365732e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/config/session.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/config/session.php" bytes read 6268 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|6268|0|0|0|2f636f6e6669672f73657373696f6e2e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/config/services.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/config/services.php" bytes read 980 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|980|0|0|0|2f636f6e6669672f73657276696365732e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/config/queue.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/config/view.php" bytes read 1004 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|1004|0|0|0|2f636f6e6669672f766965772e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/config/queue.php" bytes read 2481 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|2481|0|0|0|2f636f6e6669672f71756575652e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/config/mail.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/config/filesystems.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/config/mail.php" bytes read 4226 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|4226|0|0|0|2f636f6e6669672f6d61696c2e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/config/filesystems.php" bytes read 2059 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|2059|0|0|0|2f636f6e6669672f66696c6573797374656d732e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/config/database.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/config/database.php" bytes read 3951 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|3951|0|0|0|2f636f6e6669672f64617461626173652e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/config/broadcasting.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/config/broadcasting.php" bytes read 1530 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|1530|0|0|0|2f636f6e6669672f62726f616463617374696e672e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/config/auth.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/config/auth.php" bytes read 3251 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|3251|0|0|0|2f636f6e6669672f617574682e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/config/cache.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/config/app.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/config/cache.php" bytes read 2598 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|2598|0|0|0|2f636f6e6669672f63616368652e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/config/app.php" bytes read 9384 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|9384|0|0|0|2f636f6e6669672f6170702e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/css/app.css" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/database/.gitignore" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/css/app.css" bytes read 114207 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|114207|0|0|0|2f6373732f6170702e637373|]
+Feb  6 12:08:36 10.71.50.13 u92009894 sent status No such file
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/database/factories/ModelFactory.php" flags READ mode 0666
+Feb  6 12:08:36 10.71.50.13 u92009894 close "/database/factories/ModelFactory.php" bytes read 761 written 0
+Feb  6 12:08:36 10.71.50.13 u92009894 [10.71.50.13|get|0|761|0|0|0|2f64617461626173652f666163746f726965732f4d6f64656c466163746f72792e706870|]
+Feb  6 12:08:36 10.71.50.13 u92009894 open "/database/migrations/2014_10_12_100000_create_password_resets_table.php" flags READ mode 0666
+Feb  6 12:08:37 10.71.50.13 u92009894 close "/database/.gitignore" bytes read 9 written 0
+Feb  6 12:08:37 10.71.50.13 u92009894 [10.71.50.13|get|1|9|0|0|0|2f64617461626173652f2e67697469676e6f7265|]
+Feb  6 12:08:37 10.71.50.13 u92009894 close "/database/migrations/2014_10_12_100000_create_password_resets_table.php" bytes read 683 written 0
+Feb  6 12:08:37 10.71.50.13 u92009894 [10.71.50.13|get|1|683|0|0|0|2f64617461626173652f6d6967726174696f6e732f323031345f31305f31325f3130303030305f6372656174655f70617373776f72645f7265736574735f7461626c652e706870|]
+Feb  6 12:08:37 10.71.50.13 u92009894 open "/database/migrations/2014_10_12_000000_create_users_table.php" flags READ mode 0666
+Feb  6 12:08:37 10.71.50.13 u92009894 open "/database/seeds/DatabaseSeeder.php" flags READ mode 0666
+Feb  6 12:08:37 10.71.50.13 u92009894 close "/database/migrations/2014_10_12_000000_create_users_table.php" bytes read 746 written 0
+Feb  6 12:08:37 10.71.50.13 u92009894 [10.71.50.13|get|0|746|0|0|0|2f64617461626173652f6d6967726174696f6e732f323031345f31305f31325f3030303030305f6372656174655f75736572735f7461626c652e706870|]
+Feb  6 12:08:37 10.71.50.13 u92009894 close "/database/seeds/DatabaseSeeder.php" bytes read 241 written 0
+Feb  6 12:08:37 10.71.50.13 u92009894 [10.71.50.13|get|0|241|0|0|0|2f64617461626173652f73656564732f44617461626173655365656465722e706870|]
+Feb  6 12:08:37 10.71.50.13 u92009894 open "/img/crayons-coloring-book-coloring-book-159579.jpeg" flags READ mode 0666
+Feb  6 12:08:37 10.71.50.13 u92009894 open "/img/montessori-homeNB.png" flags READ mode 0666
+Feb  6 12:08:37 10.71.50.13 u92009894 close "/img/crayons-coloring-book-coloring-book-159579.jpeg" bytes read 1578507 written 0
+Feb  6 12:08:37 10.71.50.13 u92009894 close "/img/montessori-homeNB.png" bytes read 6888 written 0
+Feb  6 12:08:37 10.71.50.13 u92009894 [10.71.50.13|get|0|1578507|0|0|0|2f696d672f637261796f6e732d636f6c6f72696e672d626f6f6b2d636f6c6f72696e672d626f6f6b2d3135393537392e6a706567|]
+Feb  6 12:08:37 10.71.50.13 u92009894 [10.71.50.13|get|0|6888|0|0|0|2f696d672f6d6f6e746573736f72692d686f6d654e422e706e67|]
+Feb  6 12:08:37 10.71.50.13 u92009894 open "/img/.DS_Store" flags READ mode 0666
+Feb  6 12:08:37 10.71.50.13 u92009894 open "/js/app.js" flags READ mode 0666
+Feb  6 12:08:37 10.71.50.13 u92009894 close "/img/.DS_Store" bytes read 6148 written 0
+Feb  6 12:08:37 10.71.50.13 u92009894 [10.71.50.13|get|0|6148|0|0|0|2f696d672f2e44535f53746f7265|]
+Feb  6 12:08:37 10.71.50.13 u92009894 close "/js/app.js" bytes read 290862 written 0
+Feb  6 12:08:37 10.71.50.13 u92009894 [10.71.50.13|get|0|290862|0|0|0|2f6a732f6170702e6a73|]
+Feb  6 12:08:37 10.71.50.13 u92009894 open "/logs/access.log.06.2" flags READ mode 0666
+Feb  6 12:08:37 10.71.50.13 u92009894 close "/logs/access.log.06.2" bytes read 4985 written 0
+Feb  6 12:08:37 10.71.50.13 u92009894 [10.71.50.13|get|0|4985|0|0|0|2f6c6f67732f6163636573732e6c6f672e30362e32|]
+Feb  6 12:08:37 10.71.50.13 u92009894 open "/logs/access.log.06.1.gz" flags READ mode 0666
+Feb  6 12:08:37 10.71.50.13 u92009894 close "/logs/access.log.06.1.gz" bytes read 561 written 0
+Feb  6 12:08:37 10.71.50.13 u92009894 [10.71.50.13|get|0|561|0|0|0|2f6c6f67732f6163636573732e6c6f672e30362e312e677a|]
+Feb  6 12:08:37 10.71.50.13 u92009894 open "/logs/sftp.log" flags READ mode 0666
