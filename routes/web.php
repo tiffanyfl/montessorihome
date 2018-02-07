@@ -25,3 +25,8 @@ Route::post('users', 'UsersController@postInfos');
 
 Route::get('/', 'ContactController@getForm');
 Route::post('/', 'ContactController@postForm');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
