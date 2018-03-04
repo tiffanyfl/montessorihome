@@ -26,6 +26,7 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+
 Route::get('/cart', 'CartController@index')->name('cart.index');
 Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
@@ -39,3 +40,8 @@ Route::post('/saveForLater/switchToCart/{product}', 'SaveForLaterController@swit
 Route::get('empty', function() {
   Cart::destroy();
 });
+
+//products' part
+Route::get('/shop', 'ShopController@index')->name('shop.index');
+
+Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
