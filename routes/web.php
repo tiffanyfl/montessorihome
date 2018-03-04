@@ -30,3 +30,8 @@ Route::post('/', 'ContactController@postForm');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+//products' part
+Route::get('/shop', 'ShopController@index')->name('shop.index');
+
+Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
