@@ -89,7 +89,7 @@
       </div>
         <div class="row row-concept">
           <div class="col-xs-12 col-sm-5 col-md-5 text-center">
-            <img src="{{URL::asset('/img/crayons-coloring-book-coloring-book-159579.jpeg')}}" alt="" class="concept-img" />
+            <img src="{{URL::asset('/storage/child.jpeg')}}" alt="" class="concept-img" />
           </div>
           <div class="col-xs-12 col-sm-7 col-md-7">
             <h2 class="concept-h2">Le concept</h2>

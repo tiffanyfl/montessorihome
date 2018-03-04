@@ -11,12 +11,7 @@
 |
 */
 
-//Route::get('/', 'WelcomeController@index');
-//Route::get('/', ['uses' => 'WelcomeController@index', 'as' => 'home']);
-
-//Route::get('facture/{n}', function($n) {
-//    return view('facture')->withNumero($n);
-//})->where('n', '[0-9]+');
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 Route::get('facture/{n}', 'ArticleController@show')->where('n', '[0-9]+');
 
@@ -29,4 +24,18 @@ Route::post('/', 'ContactController@postForm');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+});
+
+Route::get('/cart', 'CartController@index')->name('cart.index');
+Route::post('/cart', 'CartController@store')->name('cart.store');
+Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
+Route::post('/cart/switchToSaveForLater/{product}', 'CartController@switchToSaveForLater')->name('cart.switchToSaveForLater');
+Route::patch('/cart/{product}', 'CartController@update')->name('cart.update');
+
+Route::delete('/saveForLater/{product}', 'SaveForLaterController@destroy')->name('saveForLater.destroy');
+Route::post('/saveForLater/switchToCart/{product}', 'SaveForLaterController@switchToCart')->name('saveForLater.switchToCart');
+
+
+Route::get('empty', function() {
+  Cart::destroy();
 });
