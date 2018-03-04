@@ -12,4 +12,13 @@ class Product extends Model
     {
         return $query->inRandomOrder()->take(4);
     }
+	public function groups()
+    {
+    	return $this->belongsToMany('App\Group');
+    }
+
+    public function presentPrice()
+    {
+        return '$'.number_format($this->price / 100, 2);
+    }
 }
