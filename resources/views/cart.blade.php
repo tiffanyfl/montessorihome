@@ -82,14 +82,14 @@
 
             </div> <!-- end cart-table -->
 
-            <a href="#" class="have-code">Have a Code?</a>
+            <!--<a href="#" class="have-code">Have a Code?</a>
 
             <div class="have-code-container">
                 <form action="#">
                     <input type="text">
                     <button type="submit" class="button button-plain">Apply</button>
                 </form>
-            </div> <!-- end have-code-container -->
+            </div>  end have-code-container -->
 
             <div class="cart-totals">
                 <div class="cart-totals-left">
@@ -111,7 +111,7 @@
             </div> <!-- end cart-totals -->
 
             <div class="cart-buttons">
-                <a href="#" class="button">Continue Shopping</a>
+                <a href="{{ route('shop.index') }}" class="button">Continue Shopping</a>
                 <a href="#" class="button-primary">Proceed to Checkout</a>
             </div>
 
@@ -119,7 +119,7 @@
 
                 <h3>No items in Cart!</h3>
                 <div class="spacer"></div>
-                <a href="#" class="button">Continue Shopping</a>
+                <a href="{{ route('shop.index') }}" class="button">Continue Shopping</a>
                 <div class="spacer"></div>
 
             @endif
