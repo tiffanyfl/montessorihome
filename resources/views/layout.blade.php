@@ -4,11 +4,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="{{URL::asset('/storage/montessori-homeNB.png')}}" />
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Laravel Ecommerce | @yield('title', '')</title>
+        <title>@yield('title', '')</title>
 
         <link href="/img/favicon.ico" rel="SHORTCUT ICON" />
 
@@ -18,7 +19,6 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
 
         <style>
 
@@ -26,6 +26,7 @@
         body{
           font-family: 'Muli', sans-serif;
           margin: 0 auto;
+          background-color: #fff;
           }
 
         h1, h2, h3 {
@@ -62,7 +63,7 @@
 
         .footer {
           background-color: #93D3D2;
-          position: absolute;
+          /*position: absolute;*/
           width: 100%;
           height: 60px;
         }
@@ -70,6 +71,30 @@
         .footer-txt {
           padding-top: 15px;
           color: #fff;
+        }
+
+        .cart-section {
+          min-height: 100%;
+          flex-grow:1;
+        }
+
+        #page {
+          min-height:100vh; /* 1 */
+        	display:flex; /* 2 */
+        	flex-direction:column; /* 3 */
+        }
+
+        .nav-bar {
+          margin: 0 auto;
+        }
+        .nav-bar ul {
+            list-style: none;
+
+        }
+
+        .nav-bar ul li {
+          display: table-cell;
+          padding: 15px;
         }
 
         @media screen and (min-width: 769px) {
@@ -91,6 +116,24 @@
 
 
 <body class="@yield('body-class', '')">
+  <div id="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-offset-3 col-md-6 text-center">
+        <a href="/"><img src="{{URL::asset('/storage/montessori-homeNB.png')}}" alt="Montessori home logo" class="logo"/></a>
+      </div>
+  </div>
+  <div class="row">
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="{{ route('shop.index') }}">Boutique</a></li>
+        <li><a href="{{ route('cart.index') }}">Panier</a></li>
+        <li><a href="#">Inscription | Connexion</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
 
     @yield('content')
 
@@ -102,5 +145,6 @@
         <div class="col-sm-offset-3 col-sm-6 text-center footer-txt">Montessori Home - 2018</div>
       </div>
     </footer>
+  </div>
 </body>
 </html>

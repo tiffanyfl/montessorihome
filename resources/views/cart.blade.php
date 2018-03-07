@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Shopping Cart')
+@section('title', 'Panier')
 
 @section('extra-css')
 
@@ -10,9 +10,9 @@
 
     <div class="breadcrumbs">
         <div class="container">
-            <a href="#">Home</a>
+            <a href="/">Accueil</a>
             <i class="fa fa-chevron-right breadcrumb-separator"></i>
-            <span>Shopping Cart</span>
+            <span>Panier</span>
         </div>
     </div> <!-- end breadcrumbs -->
 
@@ -36,7 +36,7 @@
 
             @if (Cart::count() > 0)
 
-            <h2>{{ Cart::count() }} item(s) in Shopping Cart</h2>
+            <h2>{{ Cart::count() }} article(s) dans votre panier</h2>
 
             <div class="cart-table">
                 @foreach (Cart::content() as $item)
@@ -54,13 +54,13 @@
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
 
-                                <button type="submit" class="cart-options">Remove</button>
+                                <button type="submit" class="cart-options">Supprimer</button>
                             </form>
 
                             <form action="{{ route('cart.switchToSaveForLater', $item->rowId) }}" method="POST">
                                 {{ csrf_field() }}
 
-                                <button type="submit" class="cart-options">Save for Later</button>
+                                <button type="submit" class="cart-options">Sauvegarder</button>
                             </form>
                         </div>
                         <div>
@@ -93,13 +93,13 @@
 
             <div class="cart-totals">
                 <div class="cart-totals-left">
-                    Shipping is free because we’re awesome like that. Also because that’s additional stuff I don’t feel like figuring out :).
+
                 </div>
 
                 <div class="cart-totals-right">
                     <div>
-                        Subtotal <br>
-                        Tax (13%)<br>
+                        Sous total <br>
+                        Taxes (13%)<br>
                         <span class="cart-totals-total">Total</span>
                     </div>
                     <div class="cart-totals-subtotal">
@@ -111,22 +111,22 @@
             </div> <!-- end cart-totals -->
 
             <div class="cart-buttons">
-                <a href="{{ route('shop.index') }}" class="button">Continue Shopping</a>
-                <a href="#" class="button-primary">Proceed to Checkout</a>
+                <a href="{{ route('shop.index') }}" class="button">Continuer votre shopping</a>
+                <a href="#" class="button">Procéder au paiement</a>
             </div>
 
             @else
 
-                <h3>No items in Cart!</h3>
+                <h3>Il y a aucun article dans votre panier !</h3>
                 <div class="spacer"></div>
-                <a href="{{ route('shop.index') }}" class="button">Continue Shopping</a>
+                <a href="{{ route('shop.index') }}" class="button button-continue">Continuer votre shopping</a>
                 <div class="spacer"></div>
 
             @endif
 
             @if (Cart::instance('saveForLater')->count() > 0)
 
-            <h2>{{ Cart::instance('saveForLater')->count() }} item(s) Saved For Later</h2>
+            <h2>{{ Cart::instance('saveForLater')->count() }} article(s) sauvegardé(s) pour plus tard</h2>
 
             <div class="saved-for-later cart-table">
                 @foreach (Cart::instance('saveForLater')->content() as $item)
@@ -144,13 +144,13 @@
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
 
-                                <button type="submit" class="cart-options">Remove</button>
+                                <button type="submit" class="cart-options">Supprimer</button>
                             </form>
 
                             <form action="{{ route('saveForLater.switchToCart', $item->rowId) }}" method="POST">
                                 {{ csrf_field() }}
 
-                                <button type="submit" class="cart-options">Move to Cart</button>
+                                <button type="submit" class="cart-options">Ajouter au panier</button>
                             </form>
                         </div>
 
@@ -163,7 +163,7 @@
 
             @else
 
-            <h3>You have no items Saved for Later.</h3>
+            <h3 class="no-save">Vous avez aucun article sauvegardé.</h3>
 
             @endif
 
