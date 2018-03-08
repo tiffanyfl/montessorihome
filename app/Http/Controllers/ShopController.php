@@ -15,7 +15,7 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $pagination = 2;
+        $pagination = 3;
         $groups = Group::all();
 
         if(request()->group){
@@ -27,9 +27,9 @@ class ShopController extends Controller
             //name of group
             $groupName = $groups->where('slug', request()->group)->first()->name;
         } else{
-            $products = Product::where('featured', true);
+            $products = Product::where('featured', false);
             // $groups = Group::all();
-            $groupName = 'Produits';
+            $groupName = 'Tous les produits';
         }
         
         //By order
