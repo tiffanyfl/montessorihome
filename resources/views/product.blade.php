@@ -68,6 +68,7 @@
 
 @section('extra-js')
     <script>
+        //move and images selection
         (function(){
             const currentImage = document.querySelector('#currentImage');
             const images = document.querySelectorAll('.product-section-thumbnail');
@@ -76,10 +77,10 @@
 
             function thumbnailClick(e) {
                 currentImage.classList.remove('active');
-                currentImage.addEventListener('transitionend', () => {
+                // currentImage.addEventListener('transitionend', () => {
                     currentImage.src = this.querySelector('img').src;
                     currentImage.classList.add('active');
-                })
+                // })
                 images.forEach((element) => element.classList.remove('selected'));
                 this.classList.add('selected');
             }
