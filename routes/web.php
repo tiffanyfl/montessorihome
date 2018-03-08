@@ -13,11 +13,6 @@
 
 use Gloudemans\Shoppingcart\Facades\Cart;
 
-Route::get('facture/{n}', 'ArticleController@show')->where('n', '[0-9]+');
-
-Route::get('users', 'UsersController@getInfos');
-Route::post('users', 'UsersController@postInfos');
-
 Route::get('/', 'ContactController@getForm');
 Route::post('/', 'ContactController@postForm');
 
@@ -48,7 +43,5 @@ Route::get('/shop', 'ShopController@index')->name('shop.index');
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 
 Route::get('/404', function () {
-
     return view('404');
-
 });

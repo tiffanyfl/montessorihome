@@ -45,7 +45,7 @@
                         <a href="{{ route('shop.show', $item->model->slug) }}"><img src="{{ productImage($item->model->image) }}" alt="item" class="cart-table-img"></a>
                         <div class="cart-item-details">
                             <div class="cart-table-item"><a href="{{ route('shop.show', $item->model->slug) }}">{{ $item->model->name }}</a></div>
-                            <div class="cart-table-description">{{ $item->model->details }}</div>
+                            <!--<div class="cart-table-description">{{ $item->model->details }}</div>-->
                         </div>
                     </div>
                     <div class="cart-table-row-right">
@@ -135,7 +135,7 @@
                         <a href="{{ route('shop.show', $item->model->slug) }}"><img src="{{ productImage($item->model->image) }}" alt="item" class="cart-table-img"></a>
                         <div class="cart-item-details">
                             <div class="cart-table-item"><a href="{{ route('shop.show', $item->model->slug) }}">{{ $item->model->name }}</a></div>
-                            <div class="cart-table-description">{{ $item->model->details }}</div>
+                            <!--<div class="cart-table-description">{{ $item->model->details }}</div>-->
                         </div>
                     </div>
                     <div class="cart-table-row-right">

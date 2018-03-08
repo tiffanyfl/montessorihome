@@ -8661,10 +8661,17 @@ ul li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .list-product figcaption a {
   font-family: 'Quicksand', sans-serif;
+  text-decoration: none;
+}
+
+.list-product figcaption a:hover {
+  color: #89c6c5;
+  text-decoration: none;
 }
 
 .container-shop {

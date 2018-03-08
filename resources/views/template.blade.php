@@ -11,6 +11,8 @@
         {!! Html::style('https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css') !!}
         {!! Html::style('https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css') !!}
 
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
         <!--[if lt IE 9]>
             {{ Html::style('https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js') }}
             {{ Html::style('https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js') }}
@@ -81,12 +83,26 @@
         </style>
     </head>
     <body>
-      <div class="container">
+      <div id="page">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-offset-3 col-md-6 text-center">
+              <a href="/"><img src="{{URL::asset('/img/montessori-homeNB.png')}}" alt="Montessori home logo" class="logo"/></a>
+            </div>
+        </div>
         <div class="row">
-          <div class="col-sm-offset-3 col-md-6 text-center">
-            <img src="{{URL::asset('/img/montessori-homeNB.png')}}" alt="Montessori home logo" class="logo"/>
-          </div>
+          <nav class="nav-bar">
+            <ul>
+              <li><a href="/">Accueil</a></li>
+              <li><a href="{{ route('shop.index') }}">Boutique</a></li>
+              <li><a href="{{ route('cart.index') }}">Panier</a></li>
+              <li><a href="/404">Inscription | Connexion</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
+      <div class="container">
         <div class="row row-concept">
           <div class="col-xs-12 col-sm-5 col-md-5 text-center">
             <img src="{{URL::asset('/storage/child.jpeg')}}" alt="" class="concept-img" />
@@ -94,7 +110,7 @@
           <div class="col-xs-12 col-sm-7 col-md-7">
             <h2 class="concept-h2">Le concept</h2>
             <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce purus mauris, luctus id elit at, vulputate vulputate magna. Sed vel pharetra velit. Phasellus quis velit sit amet augue aliquam sodales. Ut vitae ultrices lacus. Vivamus sit amet tincidunt sapien. Sed ac pulvinar ex. Aliquam in enim ipsum. Vivamus a malesuada massa. Nunc at iaculis massa, at accumsan mi. Donec feugiat dolor non mi maximus, in mollis lorem sodales. Nulla facilisi. Pellentesque ac eros ex. </p>
-            <p class="text-center"><a href="#" class="btn btn-montessori">Lien Ulule</a></p>
+            <p class="text-center"><a href="/404" class="btn btn-montessori">Lien Ulule</a></p>
           </div>
         </div>
         <div class="row row-newsletter">
@@ -104,10 +120,13 @@
       </div>
     </div>
   </div>
+
   <footer class="footer">
     <div class="container">
       <div class="col-sm-offset-3 col-sm-6 text-center footer-txt">Montessori Home - 2018</div>
     </div>
   </footer>
+</div>
+
 </body>
 </html>

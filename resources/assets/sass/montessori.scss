@@ -118,6 +118,7 @@ ul li a{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .list-product figcaption a {
@@ -127,6 +128,7 @@ ul li a{
 
 .list-product figcaption a:hover {
   color: #89c6c5;
+  text-decoration: none;
 }
 
 .container-shop {
