@@ -1,18 +1,25 @@
-@extends('common')
+@extends('layout')
 
-@section('contenu')
+@section('title', 'La boutique')
 
-<nav>
-	<ul class="fil">
-		<li><a href="/">Accueil</a></li>
-		<li>Shop</li>
-	</ul>
-</nav>
+@section('extra-css')
 
-<section>
-    
+@endsection
+
+@section('content')
+
+<div class="breadcrumbs">
+		<div class="container">
+				<a href="/">Accueil</a>
+				<i class="fa fa-chevron-right breadcrumb-separator"></i>
+				<span>Boutique</span>
+		</div>
+</div> <!-- end breadcrumbs -->
+
+<section class="container container-shop">
+
     <!-- categories -->
-    <div class="col-xs-4 category-product">
+    <div class="col-sm-3 category-product">
         <h2>Par Catégorie</h2>
         <ul>
             @foreach($groups as $group)
@@ -22,7 +29,7 @@
     </div>
 
     <!-- list order -->
-    <div class="col-xs-8">
+    <div class="col-sm-8">
         <div class="order-product">
             <h3>{{ $groupName }}</h3>
             <div class="price">

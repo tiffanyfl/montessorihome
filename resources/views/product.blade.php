@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title', 'Boutique')
+@section('title', $product->name)
 
 @section('extra-css')
 
@@ -12,7 +12,7 @@
 		<div class="container">
 				<a href="/">Accueil</a>
 				<i class="fa fa-chevron-right breadcrumb-separator"></i>
-				<a href="{{ route('shop.index') }}">Shop</a>
+				<a href="{{ route('shop.index') }}">Boutique</a>
 				<i class="fa fa-chevron-right breadcrumb-separator"></i>
 				<span>{{ $product->name }}</span>
 		</div>
@@ -40,8 +40,8 @@
 
     <!-- details -->
 	<div class="product-detail">
+				<p>{!! $product->presentPrice() !!}</p>
         <p>{!! $product->details !!}</p>
-        <p>{!! $product->presentPrice() !!}</p>
         <p>{!! $product->description !!}</p>
 
 				<form action="{{ route('cart.store') }}" method="POST">

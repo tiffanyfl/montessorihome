@@ -130,4 +130,5 @@ class CartController extends Controller
             ->associate('App\Product');
         return redirect()->route('cart.index')->with('success_message', 'L\'article a été ajouté dans votre liste de sauvegarde !');
     }
+
 }

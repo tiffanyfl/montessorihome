@@ -1,13 +1,13 @@
-<div class="also-like">
+<div class="also-like text-center">
 	<h3>Vous aimerez aussi</h3>
-	<div class="also-like-product">
+	<div class="also-like-product container">
 		@foreach($mightAlsoLike as $product)
 		<figure>
 			<a href="{{ route('shop.show', $product->slug) }}">
-				<img src="{{ productImage($product->image) }}" width="40" height="40" alt="{{ $product->name }}">
+				<img src="{{ productImage($product->image) }}" width="50%" alt="{{ $product->name }}">
 			</a>
-			<figcaption>
-				{{ $product->name }}
+			<figcaption class="text-center">
+				{{ $product->name }}<br>
 				{{ $product->presentPrice() }}
 			</figcaption>
 		</figure>

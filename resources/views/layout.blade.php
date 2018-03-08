@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="{{URL::asset('/storage/montessori-homeNB.png')}}" />
+        <link rel="icon" href="{{URL::asset('/img/montessori-homeNB.png')}}" />
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -40,7 +40,7 @@
         <li><a href="/">Accueil</a></li>
         <li><a href="{{ route('shop.index') }}">Boutique</a></li>
         <li><a href="{{ route('cart.index') }}">Panier</a></li>
-        <li><a href="#">Inscription | Connexion</a></li>
+        <li><a href="/404">Inscription | Connexion</a></li>
       </ul>
     </nav>
   </div>

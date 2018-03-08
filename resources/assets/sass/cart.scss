@@ -70,6 +70,7 @@
 
             &:hover {
                 //color: lighten($text-color, 30%);
+                background-color: #89c6c5;
             }
         }
     }
@@ -110,6 +111,11 @@
           background-color: #93D3D2;
           color: #fff;
           padding: 5px;
+          text-decoration : none ;
+        }
+
+        .button:hover, .button-continue {
+            background-color: #89c6c5;
         }
     }
 
