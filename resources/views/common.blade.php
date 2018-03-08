@@ -90,6 +90,15 @@
           flex-direction: row;
           justify-content: space-between;
         }
+        
+        .product-view, .product-view-image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .product-view {
+            flex-direction: column;
+        }
 
         @media screen and (min-width: 769px) {
         .footer {

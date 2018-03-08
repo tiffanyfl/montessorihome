@@ -4,7 +4,7 @@
 		@foreach($mightAlsoLike as $product)
 		<figure>
 			<a href="{{ route('shop.show', $product->slug) }}">
-				<img src="{{ asset('storage/'.$product->image) }}" width="" height="" alt="{{ $product->name }}">
+				<img src="{{ productImage($product->image) }}" width="40" height="40" alt="{{ $product->name }}">
 			</a>
 			<figcaption>
 				{{ $product->name }}
