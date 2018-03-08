@@ -97,7 +97,23 @@
               <li><a href="/">Accueil</a></li>
               <li><a href="{{ route('shop.index') }}">Boutique</a></li>
               <li><a href="{{ route('cart.index') }}">Panier</a></li>
-              <li><a href="/404">Inscription | Connexion</a></li>
+              <!--<span class="cart-count">{{ Cart::instance('default')->count() }}</span> -->
+              @guest
+              <li><a href="{{ route('register') }}">Inscription</a></li>
+              <li><a href="{{ route('login') }}">Connexion</a></li>
+              @else
+              <li>
+                <a href="{{ route('logout') }}"
+                  onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+                  Se déconnecter
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+              </li>
+              @endguest
             </ul>
           </nav>
         </div>

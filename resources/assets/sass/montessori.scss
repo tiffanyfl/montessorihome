@@ -190,6 +190,11 @@ form .button:hover {
   min-height: 58vh;
 }
 
+/*LOGIN & REGISTER*/
+.container-login, .container-register {
+  min-height: 58vh;
+}
+
 
 @media screen and (min-width: 769px) {
   .footer {

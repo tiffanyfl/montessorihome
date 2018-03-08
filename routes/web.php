@@ -45,3 +45,7 @@ Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 Route::get('/404', function () {
     return view('404');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
