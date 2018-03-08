@@ -22,18 +22,24 @@
 
     <!-- main image -->
     <div class="product-image">
-        <h2>{{ $product->name }}</h2>
-        <img src="{{ productImage($product->image) }}" width="250" height="200" alt="{{ $product->name }}" class="active" id="currentImage">
+        <div class="">
+            <h2>{{ $product->name }}</h2>
+            <img src="{{ productImage($product->image) }}" width="250" height="200" alt="{{ $product->name }}" class="active" id="currentImage">
+        </div>
 
         <!-- others images -->
         <div class="product-multiple-images">
-        @if ($product->images)
-        @foreach (json_decode($product->images, true) as $image)
             <div class="product-section-thumbnail selected">
-                <img src="{{ productImage($image) }}" width="50" height="50" alt="{{ $product->name }}">
-            </div>
-            @endforeach
-        @endif
+                <img src="{{ productImage($product->image) }}" width="50" height="50" alt="{{ $product->name }}">
+            </div> 
+
+            @if ($product->images)
+            @foreach (json_decode($product->images, true) as $image)
+                <div class="product-section-thumbnail">
+                    <img src="{{ productImage($image) }}" width="50" height="50" alt="{{ $product->name }}">
+                </div>
+                @endforeach
+            @endif
         </div>
 
     </div>
