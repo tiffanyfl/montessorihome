@@ -6,12 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    //
-
     public function scopeMightAlsoLike($query)
     {
         return $query->inRandomOrder()->take(4);
     }
+    
 	public function groups()
     {
     	return $this->belongsToMany('App\Group');
@@ -19,6 +18,7 @@ class Product extends Model
 
     public function presentPrice()
     {
-        return '€'.number_format($this->price);
+        return number_format($this->price).' €';
     }
+
 }

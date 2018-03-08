@@ -67,6 +67,30 @@
           color: #fff;
         }
 
+        /*shop and product*/
+        .fil, .also-like-product{
+          display: flex;
+          flex-direction: row;
+        }
+        .fil a{
+          color: #93D3D2;
+        }
+        ul li{
+          list-style: none;
+        }
+        ul li a{
+          color: #000;
+        }
+
+        .category-product{
+          border-right: 1px solid gray;
+        }
+        .list-product, .order-product{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
         @media screen and (min-width: 769px) {
         .footer {
           /*bottom: 0;*/
