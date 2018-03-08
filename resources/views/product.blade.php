@@ -1,17 +1,25 @@
-@extends('common')
+@extends('layout')
 
-@section('contenu')
+@section('title', 'Boutique')
 
-<nav>
-	<ul class="fil">
-		<li><a href="/">Accueil</a></li>
-		<li><a href="{{ route('shop.index') }}">Shop</a></li>
-		<li>{{ $product->name }}</li>
-	</ul>
-</nav>
+@section('extra-css')
 
-<div class="view-product text-center">
-    
+@endsection
+
+@section('content')
+
+<div class="breadcrumbs">
+		<div class="container">
+				<a href="/">Accueil</a>
+				<i class="fa fa-chevron-right breadcrumb-separator"></i>
+				<a href="{{ route('shop.index') }}">Shop</a>
+				<i class="fa fa-chevron-right breadcrumb-separator"></i>
+				<span>{{ $product->name }}</span>
+		</div>
+</div> <!-- end breadcrumbs -->
+
+<div class="view-product container">
+
     <!-- main image -->
     <div class="product-image">
         <h2>{{ $product->name }}</h2>
@@ -27,14 +35,22 @@
             @endforeach
         @endif
         </div>
-       
+
     </div>
-    
+
     <!-- details -->
 	<div class="product-detail">
         <p>{!! $product->details !!}</p>
         <p>{!! $product->presentPrice() !!}</p>
         <p>{!! $product->description !!}</p>
+
+				<form action="{{ route('cart.store') }}" method="POST">
+		      {{ csrf_field() }}
+		      <input type="hidden" name="id" value="{{ $product->id }}">
+		      <input type="hidden" name="name" value="{{ $product->name }}">
+		      <input type="hidden" name="price" value="{{ $product->price }}">
+		      <button type="submit" class="button button-plain">Add to Cart</button>
+		    </form>
     </div>
 
 </div>
@@ -49,9 +65,9 @@
         (function(){
             const currentImage = document.querySelector('#currentImage');
             const images = document.querySelectorAll('.product-section-thumbnail');
-            
+
             images.forEach((element) => element.addEventListener('click', thumbnailClick));
-            
+
             function thumbnailClick(e) {
                 currentImage.classList.remove('active');
                 currentImage.addEventListener('transitionend', () => {

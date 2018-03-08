@@ -1,5 +1,5 @@
 <div class="also-like">
-	<h3>Tu aimeras aussi</h3>
+	<h3>Vous aimerez aussi</h3>
 	<div class="also-like-product">
 		@foreach($mightAlsoLike as $product)
 		<figure>

@@ -8,6 +8,9 @@
         <title>Montessori Home</title>
         <link href="https://fonts.googleapis.com/css?family=Muli|Quicksand" rel="stylesheet">
 
+        <!-- Styles -->
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
         {!! Html::style('https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css') !!}
         {!! Html::style('https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css') !!}
 
@@ -81,7 +84,7 @@
         ul li a{
           color: #000;
         }
-            
+
         /*shop page*/
         .category-product{
           border-right: 1px solid gray;
@@ -91,7 +94,7 @@
           flex-direction: row;
           justify-content: space-between;
         }
-        
+
         /*product page*/
         .view-product {
             display: flex;
@@ -108,7 +111,7 @@
             grid-gap: 20px;
             margin-top: 20px;
         }
-            
+
         .product-section-thumbnail {
             display: flex;
             align-items: center;
@@ -117,15 +120,15 @@
             min-height: 60px;
             cursor: pointer;
         }
-            
+
         .product-section-thumbnail:hover {
             border: 1px solid gray;
         }
-            
+
         .view-product .selected {
             border: 1px solid gray;
         }
-        
+
 
         @media screen and (min-width: 769px) {
         .footer {
@@ -143,11 +146,11 @@
     </head>
     <body>
         <div class="container">
-            
+
             @yield('contenu')
-            
+
             @yield('extra-js')
-            
+
         </div>
   <footer class="footer">
     <div class="container">
