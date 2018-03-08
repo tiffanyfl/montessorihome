@@ -33,11 +33,12 @@
         @forelse($products as $product)
         <figure>
             <a href="{{ route('shop.show', $product->slug) }}">
-                <img src="{{ asset('storage/'.$product->image) }}" width="" height="" alt="{{ $product->name }}">
+<!--                <img src="{{ asset('storage/'.$product->image) }}" width="150" height="100" alt="{{ $product->name }}">-->
+                <img src="{{ productImage($product->image) }}" width="150" height="100" alt="{{ $product->name }}">
             </a>
             <figcaption>
                 <a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>
-                {{ $product->description }} - {{ $product->presentPrice() }}
+                {!! $product->description !!} {{ $product->presentPrice() }}
             </figcaption>
         </figure>
         @empty

@@ -6,7 +6,7 @@ function presentPrice($price)
 
 function productImage($path)
 {
-//    return file_exists('storage/'.$path) ? asset('storage/'.$path) : asset('img/not-found.png');
-    return $path && file_exists('storage/'.$path) ? asset('storage/'.$path) : asset('img/not-found.jpg');
+return file_exists('storage/'.$path) ? asset('storage/'.$path) : asset('img/not-found.png');
+//    return $path && file_exists('storage/'.$path) ? asset('storage/'.$path) : asset('img/not-found.jpg');
 }
 
