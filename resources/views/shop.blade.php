@@ -10,6 +10,8 @@
 </nav>
 
 <section>
+    
+    <!-- categories -->
     <div class="col-xs-4 category-product">
         <h2>Par Catégorie</h2>
         <ul>
@@ -19,6 +21,7 @@
         </ul>
     </div>
 
+    <!-- list order -->
     <div class="col-xs-8">
         <div class="order-product">
             <h3>{{ $groupName }}</h3>
@@ -29,6 +32,7 @@
             </div>
         </div>
 
+        <!-- list products -->
         <div class="list-product">
         @forelse($products as $product)
         <figure>

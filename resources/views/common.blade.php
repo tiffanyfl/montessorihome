@@ -67,7 +67,7 @@
           color: #fff;
         }
 
-        /*shop and product*/
+        /*SHOP, PRODUCT AND ALSO-LIKE*/
         .fil, .also-like-product{
           display: flex;
           flex-direction: row;
@@ -81,7 +81,8 @@
         ul li a{
           color: #000;
         }
-
+            
+        /*shop page*/
         .category-product{
           border-right: 1px solid gray;
         }
@@ -91,14 +92,40 @@
           justify-content: space-between;
         }
         
-        .product-view, .product-view-image{
+        /*product page*/
+        .view-product {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
+            margin-bottom: 50px;
         }
-        .product-view {
-            flex-direction: column;
+        .selected {
+            border: 1px solid #93D3D2;
         }
+        .product-multiple-images{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            margin-top: 20px;
+        }
+            
+        .product-section-thumbnail {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid lightgray;
+            min-height: 60px;
+            cursor: pointer;
+        }
+            
+        .product-section-thumbnail:hover {
+            border: 1px solid gray;
+        }
+            
+        .view-product .selected {
+            border: 1px solid gray;
+        }
+        
 
         @media screen and (min-width: 769px) {
         .footer {
@@ -118,6 +145,8 @@
         <div class="container">
             
             @yield('contenu')
+            
+            @yield('extra-js')
             
         </div>
   <footer class="footer">

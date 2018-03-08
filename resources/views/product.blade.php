@@ -11,20 +11,27 @@
 </nav>
 
 <div class="view-product text-center">
-	<h2>{{ $product->name }}</h2>
-    <div class="product-view">
-        <img src="{{ productImage($product->image) }}" width="250" height="200" alt="{{ $product->name }}">
+    
+    <!-- main image -->
+    <div class="product-image">
+        <h2>{{ $product->name }}</h2>
+        <img src="{{ productImage($product->image) }}" width="250" height="200" alt="{{ $product->name }}" class="active" id="currentImage">
 
+        <!-- others images -->
+        <div class="product-multiple-images">
         @if ($product->images)
         @foreach (json_decode($product->images, true) as $image)
-            <div class="product-view-image">
-                <img src="{{ productImage($image) }}" width="50" height="50" alt="product">
+            <div class="product-section-thumbnail selected">
+                <img src="{{ productImage($image) }}" width="50" height="50" alt="{{ $product->name }}">
             </div>
             @endforeach
         @endif
+        </div>
        
     </div>
-	<div class="">
+    
+    <!-- details -->
+	<div class="product-detail">
         <p>{!! $product->details !!}</p>
         <p>{!! $product->presentPrice() !!}</p>
         <p>{!! $product->description !!}</p>
@@ -32,6 +39,28 @@
 
 </div>
 
+
 @include('might-like')
 
+@endsection
+
+@section('extra-js')
+    <script>
+        (function(){
+            const currentImage = document.querySelector('#currentImage');
+            const images = document.querySelectorAll('.product-section-thumbnail');
+            
+            images.forEach((element) => element.addEventListener('click', thumbnailClick));
+            
+            function thumbnailClick(e) {
+                currentImage.classList.remove('active');
+                currentImage.addEventListener('transitionend', () => {
+                    currentImage.src = this.querySelector('img').src;
+                    currentImage.classList.add('active');
+                })
+                images.forEach((element) => element.classList.remove('selected'));
+                this.classList.add('selected');
+            }
+        })();
+    </script>
 @endsection
