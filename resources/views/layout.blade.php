@@ -31,7 +31,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-offset-3 col-md-6 text-center">
-        <a href="/"><img src="{{URL::asset('/storage/montessori-homeNB.png')}}" alt="Montessori home logo" class="logo"/></a>
+        <a href="/"><img src="{{URL::asset('/img/montessori-homeNB.png')}}" alt="Montessori home logo" class="logo"/></a>
       </div>
   </div>
   <div class="row">
