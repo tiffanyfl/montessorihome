@@ -31,7 +31,7 @@
         <div class="product-multiple-images">
             <div class="product-section-thumbnail selected">
                 <img src="{{ productImage($product->image) }}" width="50" height="50" alt="{{ $product->name }}">
-            </div> 
+            </div>
 
             @if ($product->images)
             @foreach (json_decode($product->images, true) as $image)
@@ -62,7 +62,7 @@
 </div>
 
 
-@include('might-like')
+@include('partials.might-like')
 
 @endsection
 
