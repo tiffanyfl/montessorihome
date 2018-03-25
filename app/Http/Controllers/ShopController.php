@@ -23,15 +23,13 @@ class ShopController extends Controller
             $products = Product::with('groups')->whereHas('groups', function($query) {
                 $query->where('slug', request()->group);
             });
-            // $groups = Group::all();
             //name of group
             $groupName = $groups->where('slug', request()->group)->first()->name;
         } else{
             $products = Product::where('featured', false);
-            // $groups = Group::all();
             $groupName = 'Tous les produits';
         }
-        
+
         //By order
         if(request()->sort == 'low_high'){
             $products = $products->orderBy('price')->paginate($pagination);
@@ -79,6 +77,21 @@ class ShopController extends Controller
 
         return view('product', compact(['product', 'mightAlsoLike']));
     }
+
+    //search product
+    public function search(Request $request)
+    {
+      $this->validate($request,[
+          'query' => 'required|min:3',
+      ]);
+
+      $query = $request->input('query');
+
+      $products = Product::search($query)->paginate(2);
+
+      return view('search-results', compact('products'));
+    }
+
 
     /**
      * Show the form for editing the specified resource.

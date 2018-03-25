@@ -8,13 +8,30 @@
 
 @section('content')
 
-<div class="breadcrumbs">
-		<div class="container">
-				<a href="/">Accueil</a>
-				<i class="fa fa-chevron-right breadcrumb-separator"></i>
-				<span>Boutique</span>
-		</div>
-</div> <!-- end breadcrumbs -->
+<!-- if there's a error -->
+<div class="container">
+@if (session()->has('success_message'))
+    <div class="alert alert-success">
+        {{ session()->get('success_message') }}
+    </div>
+@endif
+
+@if(count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+</div>
+
+@component('components.breadcrumbs')
+<a href="/">Accueil</a>
+<i class="fa fa-chevron-right breadcrumb-separator"></i>
+<span>Boutique</span>
+@endcomponent
 
 <section class="container container-shop">
 

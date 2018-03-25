@@ -42,6 +42,8 @@ Route::get('/shop', 'ShopController@index')->name('shop.index');
 
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
 
+Route::get('/search', 'ShopController@search')->name('search');
+
 Route::get('/404', function () {
     return view('404');
 });
