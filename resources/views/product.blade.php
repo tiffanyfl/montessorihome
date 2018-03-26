@@ -31,7 +31,7 @@
         <div class="product-multiple-images">
             <div class="product-section-thumbnail selected">
                 <img src="{{ productImage($product->image) }}" width="50" height="50" alt="{{ $product->name }}">
-            </div> 
+            </div>
 
             @if ($product->images)
             @foreach (json_decode($product->images, true) as $image)
@@ -55,7 +55,7 @@
 		      <input type="hidden" name="id" value="{{ $product->id }}">
 		      <input type="hidden" name="name" value="{{ $product->name }}">
 		      <input type="hidden" name="price" value="{{ $product->price }}">
-		      <button type="submit" class="button button-plain">Add to Cart</button>
+		      <button type="submit" class="button button-plain">Ajouter au panier</button>
 		    </form>
     </div>
 
