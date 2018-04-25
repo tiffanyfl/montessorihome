@@ -27,13 +27,13 @@
 @endif
 </div>
 
-@component('components.breadcrumbs')
-<a href="/">Accueil</a>
-<i class="fa fa-chevron-right breadcrumb-separator"></i>
-<span>Boutique</span>
-@endcomponent
-
 <section class="container container-shop">
+
+  @component('components.breadcrumbs')
+  <a href="/">Accueil</a>
+  <i class="fa fa-chevron-right breadcrumb-separator"></i>
+  <span>Boutique</span>
+  @endcomponent
 
     <!-- categories -->
     <div class="col-sm-3 category-product">
@@ -46,10 +46,11 @@
     </div>
 
     <!-- list order -->
-    <div class="col-sm-8">
+    <div class="order col-xs-12 col-sm-8">
         <div class="order-product">
             <h3>{{ $groupName }}</h3>
             <div class="price">
+              <div class="bar-search">@include('partials.search')</div>
                 <strong>Prix : </strong>
                 <a href="{{ route('shop.index', ['group' => request()->group, 'sort' => 'low_high']) }}">Croissant</a>
                 <a href="{{ route('shop.index', ['group' => request()->group, 'sort' => 'high_low']) }}">Décroissant</a>

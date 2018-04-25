@@ -1,6 +1,5 @@
 <div class="breadcrumbs container">
-  <div class="breadcrumbs-container col-sm-8">
+  <div class="breadcrumbs-container col-sm-11">
     {{ $slot }}
-    <div class="bar-search">@include('partials.search')</div>
   </div>
 </div>
