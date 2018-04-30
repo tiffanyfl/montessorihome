@@ -1,6 +1,6 @@
 <div class="also-like text-center">
 	<h3>Vous aimerez aussi</h3>
-	<div class="also-like-product container">
+	<div class="also-like-product">
 		@foreach($mightAlsoLike as $product)
 		<figure>
 			<a href="{{ route('shop.show', $product->slug) }}">

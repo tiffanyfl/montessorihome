@@ -93,14 +93,19 @@ a {
 .fil, .also-like-product{
   display: flex;
   flex-direction: row;
-  width: 50%;
 }
 
-.also-like-product figure {
-  margin: 0 20px;
+.also-like-product{
+  justify-content: space-around;
+  figure {
+    margin: 0 20px;
+  }
 }
-.fil a{
-  color: #93D3D2;
+.fil{
+  width: 50%;
+  a{
+    color: #93D3D2;
+  }
 }
 ul li{
   list-style: none;
@@ -109,19 +114,48 @@ ul li a{
   color: #000;
 }
 
+/*component*/
+.breadcrumbs{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+.breadcrumbs-container{
+  padding-right: 0;
+}
+
 /*shop page*/
 .bar-search{
-  margin-top: 10px;
+  margin-bottom: 10px;
+  form input{
+    padding: 0 10px;
+  }
 }
 .category-product{
-  border-right: 1px solid #93D3D2;
   margin-right: 20px;
+  ul{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+  }
 }
+.order{
+  border-left: 1px solid #93D3D2;
+}
+.order-product .price{
+  align-self: center;
+}
+
 .list-product, .order-product{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 50px;
+}
+
+.list-product figure{
+  margin: 0 10px;
 }
 
 .list-product figcaption a {
@@ -169,6 +203,12 @@ ul li a{
     border: 1px solid gray;
 }
 
+.product-detail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .view-product .selected {
     border: 1px solid gray;
 }
@@ -207,6 +247,64 @@ form .button:hover {
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
   .concept-h2{
-  margin-top: 0;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  /*shop page*/
+  .order{
+    border-left: none;
+  }
+  .category-product{
+    ul{
+      flex-flow: row wrap;
+    }
+  }
+  .order-product{
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  /*shop page*/
+  .also-like-product{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 478px) {
+  /*shop page*/
+  .container-shop{
+    h2, h3{
+      text-align: center;
+    }
+  }
+  .list-product, .order-product{
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  .list-product{
+    align-items: center;
+    figure{
+      text-align: center;
+    }
+  }
+  .order-product{
+    margin-top: 20px;
+  }
+  .category-product ul{
+    flex-direction: column;
+  }
+  /*product page*/
+  .product-image{
+    margin-top: 15px;
+    text-align: center;
+  }
+  .also-like-product{
+    figure{
+      margin-bottom: 15px;
+    }
   }
 }
