@@ -27,13 +27,15 @@
 @endif
 </div>
 
-@component('components.breadcrumbs')
-    <a href="/">Accueil</a>
-    <i class="fa fa-chevron-right breadcrumb-separator"></i>
-    <span>Recherche</span>
-@endcomponent
-
 <div class="search-product container">
+
+  @component('components.breadcrumbs')
+      <a href="/">Accueil</a>
+      <i class="fa fa-chevron-right breadcrumb-separator"></i>
+      <span>Recherche</span>
+  @endcomponent
+
+  
     <h1>Résultats de la recherche</h1>
     <p>{{ $products->total() }} résultat(s) pour "{{ request()->input('query') }}"</p>
 

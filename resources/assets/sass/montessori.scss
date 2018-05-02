@@ -256,11 +256,6 @@ form .button:hover {
   .order{
     border-left: none;
   }
-  .category-product{
-    ul{
-      flex-flow: row wrap;
-    }
-  }
   .order-product{
     margin-top: 50px;
   }
@@ -293,9 +288,6 @@ form .button:hover {
   }
   .order-product{
     margin-top: 20px;
-  }
-  .category-product ul{
-    flex-direction: column;
   }
   /*product page*/
   .product-image{
