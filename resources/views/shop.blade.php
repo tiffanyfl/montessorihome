@@ -58,7 +58,7 @@
         </div>
 
         <!-- list products -->
-        <div class="list-product">
+        <div class="list-product text-center">
         @forelse($products as $product)
         <figure>
             <a href="{{ route('shop.show', $product->slug) }}">
@@ -66,8 +66,8 @@
                 <img src="{{ productImage($product->image) }}" width="150" height="100" alt="{{ $product->name }}">
             </a>
             <figcaption>
-                <a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>
-                {!! $product->description !!} {{ $product->presentPrice() }}
+                <a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a><br>
+                <p>{!! $product->description !!} <br> {{ $product->presentPrice() }}</p>
             </figcaption>
         </figure>
         @empty

@@ -228,6 +228,15 @@ form .button:hover {
   margin-bottom: 50px;
 }
 
+/*search-result*/
+.search-product-result{
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
 /*404*/
 .container-404 {
   min-height: 58vh;
@@ -256,11 +265,6 @@ form .button:hover {
   .order{
     border-left: none;
   }
-  .category-product{
-    ul{
-      flex-flow: row wrap;
-    }
-  }
   .order-product{
     margin-top: 50px;
   }
@@ -270,6 +274,10 @@ form .button:hover {
   /*shop page*/
   .also-like-product{
     flex-direction: column;
+  }
+  /*search-result*/
+  .h1-result{
+    font-size: 26px;
   }
 }
 
@@ -294,9 +302,6 @@ form .button:hover {
   .order-product{
     margin-top: 20px;
   }
-  .category-product ul{
-    flex-direction: column;
-  }
   /*product page*/
   .product-image{
     margin-top: 15px;
@@ -306,5 +311,9 @@ form .button:hover {
     figure{
       margin-bottom: 15px;
     }
+  }
+  /*search-result*/
+  .h1-result{
+    font-size: 20px;
   }
 }

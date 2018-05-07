@@ -87,7 +87,7 @@ class ShopController extends Controller
 
       $query = $request->input('query');
 
-      $products = Product::search($query)->paginate(2);
+      $products = Product::search($query)->paginate(10);
 
       return view('search-results', compact('products'));
     }
