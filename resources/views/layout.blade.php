@@ -30,13 +30,49 @@
   <div id="page">
   <div class="container">
     <div class="row">
-      <div class="col-sm-offset-3 col-md-6 text-center">
+      <div class="col-sm-offset-0 col-sm-12 col-md-offset-3 col-md-6 text-center">
         <a href="/"><img src="{{URL::asset('/img/montessori-homeNB.png')}}" alt="Montessori home logo" class="logo"/></a>
       </div>
   </div>
   <div class="row">
+    <nav class="nav--smallscreen">
+        <input type="checkbox" class="menu--toggler" id="menu--toggler">
+        <label for="menu--toggler" class="menu--toggler__label" >
+            <span class="menu--toggler__label__text">Menu</span>
+            <span class="menu--toggler__label__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </label>
+
+        <ul class="menu--mobile">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="{{ route('shop.index') }}">Boutique</a></li>
+          <li><a href="{{ route('cart.index') }}">Panier</a></li>
+          <!--<span class="cart-count">{{ Cart::instance('default')->count() }}</span> -->
+          @guest
+          <li><a href="{{ route('register') }}">Inscription</a></li>
+          <li><a href="{{ route('login') }}">Connexion</a></li>
+          @else
+          <li>
+            <a href="{{ route('logout') }}"
+              onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+              Se déconnecter
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
+          </li>
+          @endguest
+        </ul>
+
+    </nav>
+
     <nav class="nav-bar">
-      <ul>
+      <ul class="col-sm-12">
         <li><a href="/">Accueil</a></li>
         <li><a href="{{ route('shop.index') }}">Boutique</a></li>
         <li><a href="{{ route('cart.index') }}">Panier</a></li>
