@@ -100,7 +100,7 @@ a {
 .menu--toggler__label {
     display: none;
     position: absolute;
-    top: 5px;
+    top: 80px;
     right: 10px;
     bottom: 0;
     width: 44px;
@@ -124,7 +124,7 @@ a {
     position: absolute;
     width: 100%;
     height: 6px;
-    background-color: #1fbed6;
+    background-color: #93D3D2;
     transition: transform .5s, top .5s, bottom .5s, opacity .2s;
     /*transition: transform 4s, top 4s, bottom 4s, opacity 4s;*/
     opacity: 1;
@@ -160,12 +160,13 @@ a {
 .menu--mobile {
     position: absolute;
     list-style-type: none;
-    top: 55px;
+    top: 135px;
     left: 0;
     right: 0;
     margin: 0;
     padding-left: 0;
     display: none;
+    z-index: 1;
 }
 
 .menu--toggler:checked ~ .menu--mobile {
@@ -178,7 +179,7 @@ a {
 }
 
 .menu--mobile li {
-  border-bottom: 2px solid #1fbed6;
+  border-bottom: 2px solid #93D3D2;
 }
 
 .menu--mobile a, .menu--mobile__submenu a {
@@ -196,7 +197,7 @@ a {
 }
 
 .menu--mobile a:hover, .menu--mobile a:focus, .menu--mobile a:active {
-  color: #1fbed6;
+  color: #93D3D2;
 }
 
 .menu--mobile a, .menu--mobile a:visited {
@@ -210,7 +211,7 @@ a {
 }
 
 .menu--mobile__submenu a {
-  background-color: #1fbed6;
+  background-color: #93D3D2;
   color: #fff;
 }
 

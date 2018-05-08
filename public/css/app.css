@@ -8622,7 +8622,7 @@ a {
 .menu--toggler__label {
   display: none;
   position: absolute;
-  top: 5px;
+  top: 80px;
   right: 10px;
   bottom: 0;
   width: 44px;
@@ -8646,7 +8646,7 @@ a {
   position: absolute;
   width: 100%;
   height: 6px;
-  background-color: #1fbed6;
+  background-color: #93D3D2;
   -webkit-transition: top .5s, bottom .5s, opacity .2s, -webkit-transform .5s;
   transition: top .5s, bottom .5s, opacity .2s, -webkit-transform .5s;
   transition: transform .5s, top .5s, bottom .5s, opacity .2s;
@@ -8687,12 +8687,13 @@ a {
 .menu--mobile {
   position: absolute;
   list-style-type: none;
-  top: 55px;
+  top: 135px;
   left: 0;
   right: 0;
   margin: 0;
   padding-left: 0;
   display: none;
+  z-index: 1;
 }
 
 .menu--toggler:checked ~ .menu--mobile {
@@ -8706,7 +8707,7 @@ a {
 }
 
 .menu--mobile li {
-  border-bottom: 2px solid #1fbed6;
+  border-bottom: 2px solid #93D3D2;
 }
 
 .menu--mobile a,
@@ -8726,7 +8727,7 @@ a {
 .menu--mobile a:hover,
 .menu--mobile a:focus,
 .menu--mobile a:active {
-  color: #1fbed6;
+  color: #93D3D2;
 }
 
 .menu--mobile a,
@@ -8741,7 +8742,7 @@ a {
 }
 
 .menu--mobile__submenu a {
-  background-color: #1fbed6;
+  background-color: #93D3D2;
   color: #fff;
 }
 
@@ -8883,7 +8884,8 @@ ul li a {
 
 /*product page*/
 
-.view-product {
+.view-product,
+.product-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8892,11 +8894,18 @@ ul li a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 50px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
+}
+
+.view-product {
+  margin-bottom: 50px;
+}
+
+.product-image {
+  width: 100%;
 }
 
 .selected {
@@ -8937,9 +8946,6 @@ ul li a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .view-product .selected {
@@ -9037,6 +9043,11 @@ form .button:hover {
             flex-direction: column;
   }
 
+  .list-product {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
   /*search-result*/
 
   .h1-result {
@@ -9079,9 +9090,16 @@ form .button:hover {
 
   /*product page*/
 
-  .product-image {
+  .product-image,
+  .product-detail {
     margin-top: 15px;
+  }
+
+  .product-detail {
     text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .also-like-product figure {
