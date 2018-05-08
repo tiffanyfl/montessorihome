@@ -39,6 +39,9 @@
 
     <!-- main image -->
     <div class="product-image">
+
+      <div class="just-images">
+
         <div class="product-image-current">
             <h2>{{ $product->name }}</h2>
             <img src="{{ productImage($product->image) }}" width="250" height="200" alt="{{ $product->name }}" class="active" id="currentImage">
@@ -59,24 +62,27 @@
             @endif
         </div>
 
+      </div>
+
+        <!-- details -->
+      <div class="product-detail">
+        <div>
+            <p>{!! $product->presentPrice() !!}</p>
+            <p>{!! $product->details !!}</p>
+            <p>{!! $product->description !!}</p>
+        </div>
+
+          <form action="{{ route('cart.store') }}" method="POST">
+            {{ csrf_field() }}
+            <input type="hidden" name="id" value="{{ $product->id }}">
+            <input type="hidden" name="name" value="{{ $product->name }}">
+            <input type="hidden" name="price" value="{{ $product->price }}">
+            <button type="submit" class="button button-plain">Ajouter au panier</button>
+          </form>
+        </div>
+
     </div>
 
-    <!-- details -->
-	<div class="product-detail">
-    <div>
-				<p>{!! $product->presentPrice() !!}</p>
-        <p>{!! $product->details !!}</p>
-        <p>{!! $product->description !!}</p>
-    </div>
-
-			<form action="{{ route('cart.store') }}" method="POST">
-	      {{ csrf_field() }}
-	      <input type="hidden" name="id" value="{{ $product->id }}">
-	      <input type="hidden" name="name" value="{{ $product->name }}">
-	      <input type="hidden" name="price" value="{{ $product->price }}">
-	      <button type="submit" class="button button-plain">Ajouter au panier</button>
-	    </form>
-    </div>
 
 </div>
 
