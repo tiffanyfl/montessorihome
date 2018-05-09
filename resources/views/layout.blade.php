@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="fr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,8 +26,7 @@
     </head>
 
 
-<body class="@yield('body-class', '')">
-  <div id="page">
+<body class="@yield('body-class', '')" id="page">
   <div class="container">
     <div class="row">
       <div class="col-sm-offset-0 col-sm-12 col-md-offset-3 col-md-6 text-center">
@@ -108,6 +107,5 @@
         <div class="col-sm-offset-3 col-sm-6 text-center footer-txt">Montessori Home - 2018</div>
       </div>
     </footer>
-  </div>
 </body>
 </html>
