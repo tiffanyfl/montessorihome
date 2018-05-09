@@ -8505,8 +8505,10 @@ button.close {
   margin-bottom: 50px;
 }
 
-body {
-  min-height: 100%;
+html {
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 textarea {
@@ -8516,6 +8518,8 @@ textarea {
 body {
   font-family: 'Muli', sans-serif;
   margin: 0 auto;
+  position: relative;
+  min-height: 100%;
 }
 
 h1,
@@ -9002,7 +9006,16 @@ form .button:hover {
 
 .container-login,
 .container-register {
-  min-height: 58vh;
+  /*min-height: 58vh;*/
+  min-height: 74vh;
+}
+
+/* CART */
+
+.cart-totals-right {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
@@ -9020,6 +9033,7 @@ form .button:hover {
 
   .order-product {
     /*margin-top: 50px;*/
+    margin-bottom: 20px;
   }
 }
 
@@ -9058,6 +9072,22 @@ form .button:hover {
     position: relative;
     /*bottom: 0;*/
   }
+
+  /*CART*/
+
+  .cart-section .cart-totals .cart-totals-total {
+    font-size: 15px;
+  }
+
+  .cart-section .cart-totals {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+
+  .cart-section .cart-totals .cart-totals-right {
+    width: 35%;
+  }
 }
 
 @media screen and (max-width: 478px) {
@@ -9076,7 +9106,8 @@ form .button:hover {
             flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-bottom: 0;
+    /*margin-bottom: 0;*/
+    margin-bottom: 40px;
   }
 
   .list-product {

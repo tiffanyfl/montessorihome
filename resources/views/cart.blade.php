@@ -98,14 +98,14 @@
 
                 <div class="cart-totals-right">
                     <div>
-                        Sous total <br>
-                        Taxes (13%)<br>
+                      <!--  Sous total <br>
+                        Taxes (13%)<br>-->
                         <span class="cart-totals-total">Total</span>
                     </div>
                     <div class="cart-totals-subtotal">
-                        {{ presentPrice(Cart::subtotal()) }} <br>
-                        {{ presentPrice(Cart::tax()) }} <br>
-                        <span class="cart-totals-total">{{ presentPrice(Cart::total()) }}</span>
+                        <!--{{ presentPrice(Cart::subtotal()) }} <br>
+                        {{ presentPrice(Cart::tax()) }} <br>-->
+                        <span class="cart-totals-total">{{ presentPrice(Cart::subtotal()) }}</span>
                     </div>
                 </div>
             </div> <!-- end cart-totals -->
