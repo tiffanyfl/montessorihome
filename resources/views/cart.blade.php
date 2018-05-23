@@ -7,13 +7,6 @@
 @endsection
 
 @section('content')
-
-    @component('components.breadcrumbs')
-      <a href="/">Accueil</a>
-      <i class="fa fa-chevron-right breadcrumb-separator"></i>
-      <span>Panier</span>
-    @endcomponent <!-- end breadcrumbs -->
-
     <div class="cart-section container">
         <div>
             @if (session()->has('success_message'))
@@ -31,6 +24,12 @@
                     </ul>
                 </div>
             @endif
+
+            @component('components.breadcrumbs')
+              <a href="/">Accueil</a>
+              <i class="fa fa-chevron-right breadcrumb-separator"></i>
+              <span>Panier</span>
+            @endcomponent <!-- end breadcrumbs -->
 
             @if (Cart::count() > 0)
 

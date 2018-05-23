@@ -124,3 +124,13 @@
 
     }
 }
+
+@media screen and (max-width: 570px) {
+  .cart-section .cart-table-row .cart-table-row-left {
+    width: 50%;
+  }
+
+  .cart-section .cart-table-row .cart-table-row-right {
+    width: 50%;
+  }
+}
