@@ -99,11 +99,13 @@
 
     @yield('content')
 
+    @yield('extra-js')
+
     <footer class="footer">
       <div class="container">
         <div class="col-sm-offset-3 col-sm-6 text-center footer-txt">Montessori Home - 2018</div>
       </div>
     </footer>
-  @yield('extra-js')
+
 </body>
 </html>
