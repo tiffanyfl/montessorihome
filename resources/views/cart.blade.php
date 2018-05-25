@@ -109,7 +109,7 @@
 
             <div class="cart-buttons">
                 <a href="{{ route('shop.index') }}" class="button">Continuer votre shopping</a>
-                <a href="/404" class="button">Procéder au paiement</a>
+                <a href="{{ route('checkout.index') }}" class="button">Procéder au paiement</a>
             </div>
 
             @else
