@@ -4,13 +4,19 @@ h1.checkout-heading {
 
 .checkout-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 6fr 1fr;
   // grid-column-gap: 10px;
-  grid-gap: 30px;
-  margin: 40px auto 80px;
+  //grid-gap: 30px;
+  margin: 0 auto 80px;
+  width: 100%;
+}
+
+.container-checkout {
+  display: flex;
+}
 
   .checkout-table-container {
-    margin-left: 124px;
+    //margin-left: 124px;
   }
 
   h2 {
@@ -21,11 +27,13 @@ h1.checkout-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid $text-color-light;
+    border-top: 1px solid #93D3D2;
     padding: 14px 0;
+  }
 
-    &:last-child {
-      border-bottom: 1px solid $text-color-light;
+
+    .checkout-table-row:last-child {
+      border-bottom: 1px solid #93D3D2;
     }
 
     .checkout-table-row-left, .checkout-table-row-right {
@@ -43,12 +51,13 @@ h1.checkout-heading {
       // padding-top: 10px;
     }
 
-    .checkout-table-img {
-      max-height: 60px;
+    .checkout-table-row-left .checkout-table-img {
+      //max-height: 60px;
+      width: 50%;
     }
 
     .checkout-table-description {
-      color: $text-color-light;
+      color: #93D3D2;
     }
 
     .checkout-table-price {
@@ -56,18 +65,19 @@ h1.checkout-heading {
     }
 
     .checkout-table-quantity {
-      border: 1px solid $text-color-light;
+      border: 1px solid #93D3D2;
       padding: 4px 12px;
       margin-right: 5px;
     }
-  }
 
   .checkout-totals {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid $text-color-light;
+    border-bottom: 1px solid #93D3D2;
     padding: 18px 0;
     line-height: 2;
+  }
+
 
     .checkout-totals-right {
       text-align: right;
@@ -78,12 +88,46 @@ h1.checkout-heading {
       font-size: 22px;
       line-height: 2.2;
     }
+
+  .have-code {
+    /*display: block;*/
+    display: none;
+    margin: 14px 0;
   }
-}
+
+  .have-code-container {
+    border: 1px solid #93D3D2;
+    padding: 16px;
+    display: none;
+  }
+
+
+    .have-code-container form {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .have-code-container input[type="text"] {
+      width: 70%;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    .have-code-container input[type="submit"] {
+      background: white;
+      border: 1px solid #93D3D2;
+      padding-top: 8px;
+      padding-bottom: 8px;
+
+      &:hover {
+        background:#93D3D2;
+      }
+    }
 
 
 
 /**
+* The CSS shown here will not be introduced in the Quickstart guide, but shows
 * how you can use CSS to style your Element's container.
 */
 .StripeElement {

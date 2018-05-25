@@ -30,58 +30,59 @@
             </div>
         @endif
 
-        <h1 class="checkout-heading stylish-heading">Checkout</h1>
+        <h1 class="checkout-heading stylish-heading">Paiement</h1>
+        <div class="container-checkout">
         <div class="checkout-section">
             <div>
                 <form action="{{ route('checkout.store') }}" method="POST" id="payment-form">
                     {{ csrf_field() }}
-                    <h2>Billing Details</h2>
+                    <h2>Détails de la facture</h2>
 
                     <div class="form-group">
-                        <label for="email">Email Address</label>
+                        <label for="email">Adresse mail</label>
                         @if (auth()->user())
-                            <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->email }}" readonly>
+                            <input type="email" class="form-control" id="email" name="email" value="{{ auth()->user()->email }}" required>
                         @else
                             <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}" required>
                         @endif
                     </div>
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name">Nom</label>
                         <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required>
                     </div>
                     <div class="form-group">
-                        <label for="address">Address</label>
+                        <label for="address">Adresse</label>
                         <input type="text" class="form-control" id="address" name="address" value="{{ old('address') }}" required>
                     </div>
 
                     <div class="half-form">
                         <div class="form-group">
-                            <label for="city">City</label>
+                            <label for="city">Ville</label>
                             <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}" required>
                         </div>
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <label for="province">Province</label>
                             <input type="text" class="form-control" id="province" name="province" value="{{ old('province') }}" required>
-                        </div>
+                        </div>-->
                     </div> <!-- end half-form -->
 
                     <div class="half-form">
                         <div class="form-group">
-                            <label for="postalcode">Postal Code</label>
+                            <label for="postalcode">Code postal</label>
                             <input type="text" class="form-control" id="postalcode" name="postalcode" value="{{ old('postalcode') }}" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Phone</label>
+                            <label for="phone">Téléphone</label>
                             <input type="text" class="form-control" id="phone" name="phone" value="{{ old('phone') }}" required>
                         </div>
                     </div> <!-- end half-form -->
 
                     <div class="spacer"></div>
 
-                    <h2>Payment Details</h2>
+                    <h2>Détails du paiement</h2>
 
                     <div class="form-group">
-                        <label for="name_on_card">Name on Card</label>
+                        <label for="name_on_card">Nom / Prénom</label>
                         <input type="text" class="form-control" id="name_on_card" name="name_on_card" value="">
                     </div>
 <!--
@@ -90,7 +91,7 @@
                           Credit or debit card
                         </label>
                         <div id="card-element">
-                          <!-- a Stripe Element will be inserted here. --> 
+                          <!-- a Stripe Element will be inserted here. -->
                       <!--  </div> -->
 
                         <!-- Used to display form errors -->
@@ -98,7 +99,7 @@
                     </div>
                     <div class="spacer"></div>
 
-                    <button type="submit" id="complete-order" class="button-primary full-width">Complete Order</button>
+                    <button type="submit" id="complete-order" class="btn btn-montessori">Valider la commande</button>
 
 
                 </form>
@@ -107,7 +108,7 @@
 
 
             <div class="checkout-table-container">
-                <h2>Your Order</h2>
+                <h2>Votre commande</h2>
 
                 <div class="checkout-table">
                     @foreach (Cart::content() as $item)
@@ -131,14 +132,14 @@
 
                 <div class="checkout-totals">
                     <div class="checkout-totals-left">
-                        Subtotal <br>
+                        Sous-total <br>
                         @if (session()->has('coupon'))
                             Discount ({{ session()->get('coupon')['name'] }}) :
                             <br>
                             <hr>
-                            New Subtotal <br>
+                            Nouveau sous-total <br>
                         @endif
-                        Tax (13%)<br>
+                        Taxes (10%)<br>
                         <span class="checkout-totals-total">Total</span>
 
                     </div>
@@ -159,18 +160,19 @@
 
             @if (! session()->has('coupon'))
 
-                <a href="#" class="have-code">Have a Code?</a>
+                <a href="#" class="have-code">Code promo</a>
 
                 <div class="have-code-container">
                     <form action="{{ route('coupon.store') }}" method="POST">
                         {{ csrf_field() }}
                         <input type="text" name="coupon_code" id="coupon_code">
-                        <button type="submit" class="button button-plain">Apply</button>
+                        <button type="submit" class="button button-plain">Appliquer</button>
                     </form>
                 </div> <!-- end have-code-container -->
                 @endif
 
             </div>
+          </div>
 
 
         </div> <!-- end checkout-section -->

@@ -10,12 +10,11 @@
 
 @section('content')
 
-   <div class="thank-you-section">
-       <h1>Thank you for <br> Your Order!</h1>
-       <p>A confirmation email was sent</p>
-       <div class="spacer"></div>
+   <div class="container thank-you-section">
+       <h1>Merci pour votre commande !</h1>
+       <div class="spacer"></div><br>
        <div>
-           <a href="{{ url('/') }}" class="button">Home Page</a>
+           <a href="{{ url('/') }}" class="btn btn-montessori">Retour à l'accueil</a>
        </div>
    </div>
 
