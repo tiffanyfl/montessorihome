@@ -56,24 +56,6 @@
           margin-top: 30px;
         }
 
-        .footer {
-          background-color: #93D3D2;
-          position: absolute;
-          width: 100%;
-          height: 60px;
-        }
-
-        .footer-txt {
-          padding-top: 15px;
-          color: #fff;
-        }
-
-        @media screen and (min-width: 769px) {
-        .footer {
-          bottom: 0;
-        }
-      }
-
       @media screen and (min-width: 769px) and (max-width: 991px) {
       .concept-h2{
         margin-top: 0;
@@ -82,8 +64,7 @@
 
         </style>
     </head>
-    <body>
-      <div id="page">
+    <body id="page">
 
         <div class="container">
           <div class="row">
@@ -179,7 +160,6 @@
       <div class="col-sm-offset-3 col-sm-6 text-center footer-txt">Montessori Home - 2018</div>
     </div>
   </footer>
-</div>
 
 </body>
 </html>
