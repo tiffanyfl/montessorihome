@@ -13,11 +13,11 @@ class GroupsTableSeeder extends Seeder
      */
     public function run()
     {
-        $now = Carbon::now()->toDateTimeString();
-
-    	Group::insert([
-    		['name' => 'Cuisine', 'slug' => 'kitchen', 'created_at' => $now, 'updated_at' => $now],
-    		['name' => 'Salon', 'slug' => 'living-room', 'created_at' => $now, 'updated_at' => $now]
-    	]);
+      //   $now = Carbon::now()->toDateTimeString();
+      //
+    	// Group::insert([
+    	// 	['name' => 'Cuisine', 'slug' => 'kitchen', 'created_at' => $now, 'updated_at' => $now],
+    	// 	['name' => 'Salon', 'slug' => 'living-room', 'created_at' => $now, 'updated_at' => $now]
+    	// ]);
     }
 }
