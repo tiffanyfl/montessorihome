@@ -9,12 +9,13 @@ class UsersController extends Controller
     //
     public function getInfos()
     {
-        return view('infos');
+      return view('profil');
     }
 
 
     public function postInfos(Request $request)
     {
-        return 'Le nom est ' . $request->input('nom'); 
+        return 'Le nom est ' . $request->input('nom');
     }
+
 }

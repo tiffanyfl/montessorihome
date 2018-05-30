@@ -58,3 +58,5 @@ Route::get('/404', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/profil','UsersController@getInfos')->name('users.index');

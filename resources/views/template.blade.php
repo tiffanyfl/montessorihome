@@ -94,6 +94,7 @@
                 <li><a href="{{ route('register') }}">Inscription</a></li>
                 <li><a href="{{ route('login') }}">Connexion</a></li>
                 @else
+                <li><a href="{{ route('users.index') }}">Profil</a></li>
                 <li>
                   <a href="{{ route('logout') }}"
                     onclick="event.preventDefault();
@@ -120,6 +121,7 @@
               <li><a href="{{ route('register') }}">Inscription</a></li>
               <li><a href="{{ route('login') }}">Connexion</a></li>
               @else
+              <li><a href="{{ route('users.index') }}">Profil</a></li>
               <li>
                 <a href="{{ route('logout') }}"
                   onclick="event.preventDefault();
