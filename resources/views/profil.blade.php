@@ -19,7 +19,7 @@
 <p><strong>Vile</strong> : @if (auth()->user()->city == null) Non indiquée @else {{ auth()->user()->city }} @endif</p>
 <p><strong>Numéro de téléphone</strong> : @if (auth()->user()->phone == null) Non indiqué @else {{ auth()->user()->phone }} @endif</p>
 
-<a href="{{ route('users.modify-profile') }}" class="btn btn-montessori">Modifier mon profil</a>
+<a href="{{ route('users.modify') }}" class="btn btn-montessori">Modifier mon profil</a>
 </section>
 
 

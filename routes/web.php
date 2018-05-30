@@ -60,4 +60,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profil','UsersController@getInfos')->name('users.index');
-Route::get('/profil','UsersController@postInfos')->name('users.modify');
+Route::get('/profil/modify','UsersController@modify')->name('users.modify');
+Route::put('/profil/modify','UsersController@edit')->name('users.edit');

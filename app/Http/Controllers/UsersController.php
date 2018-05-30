@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\User;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ModifyProfileRequest;
 
 class UsersController extends Controller
 {
@@ -13,22 +14,27 @@ class UsersController extends Controller
       return view('profil');
     }
 
+    public function modify(Request $request) {
+      return view('modify-profile');
+    }
 
-    public function postInfos(Request $request)
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(ModifyProfileRequest $request)
     {
-        return view('modify-profile');
-        try {
-          $this->addToUsersTable($request, null);
-        } catch (CardErrorException $e) {
-           $this->addToUsersTable($request, $e->getMessage());
-            return back()->withErrors('Error! ' . $e->getMessage());
-        }
+      $profile = User::find(auth()->user()->id);
+      return User::make('users.modify')
+            ->with('user_id', $profile);
     }
 
     protected function addToUsersTable($request, $error)
       {
           // Insert into orders table
-          $user = Order::update([
+          $user = User::make([
               'user_id' => auth()->user()->id,
               'email' => $request->email,
               'name' => $request->name,
