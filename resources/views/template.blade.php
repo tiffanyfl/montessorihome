@@ -141,11 +141,13 @@
       <div class="container">
         <div class="row row-concept">
           <div class="col-xs-12 col-sm-5 col-md-5 text-center">
-            <img src="{{URL::asset('/img/crayons-coloring-book-coloring-book-159579.jpeg')}}" alt="" class="concept-img" />
+            <img src="{{URL::asset('/img/s-habiller-seul-06.jpg')}}" alt="" class="concept-img" />
           </div>
           <div class="col-xs-12 col-sm-7 col-md-7">
             <h2 class="concept-h2">Le concept</h2>
-            <p class="justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce purus mauris, luctus id elit at, vulputate vulputate magna. Sed vel pharetra velit. Phasellus quis velit sit amet augue aliquam sodales. Ut vitae ultrices lacus. Vivamus sit amet tincidunt sapien. Sed ac pulvinar ex. Aliquam in enim ipsum. Vivamus a malesuada massa. Nunc at iaculis massa, at accumsan mi. Donec feugiat dolor non mi maximus, in mollis lorem sodales. Nulla facilisi. Pellentesque ac eros ex. </p>
+            <p class="justify">Montessori Home est une boutique français de matériel et de mobilier destinés à l’aménagement de l’environnement de l’enfant selon les principes de la pédagogie Montessori.
+              <br>
+              Tous nos produits sont de fabrication française conçus pour <strong>accroître l’autonomie de l’enfant</strong> au quotidien et, ce faisant, <strong>renforcer considérablement sa confiance en lui-même</strong>. </p>
             <p class="text-center"><a href="/404" class="btn btn-montessori">Lien Ulule</a></p>
           </div>
         </div>

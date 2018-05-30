@@ -60,3 +60,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profil','UsersController@getInfos')->name('users.index');
+Route::get('/profil','UsersController@postInfos')->name('users.modify');
