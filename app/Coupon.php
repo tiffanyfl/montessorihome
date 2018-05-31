@@ -6,10 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Coupon extends Model
 {
+  // Search code
     public static function findByCode($code)
   {
     return self::where('code', $code)->first();
   }
+  // calculate discount
   public function discount($total)
   {
     if ($this->type == 'fixed') {

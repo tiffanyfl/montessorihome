@@ -8,17 +8,17 @@ use App\Http\Requests\ModifyProfileRequest;
 
 class UsersController extends Controller
 {
-    //
+    // Show profile
     public function getInfos()
     {
       return view('profil');
     }
-
+    // Show edit profile
     public function edit()
     {
       return view('modify-profile');
     }
-
+    // update profile in database
     public function update(ModifyProfileRequest $request)
 {
 

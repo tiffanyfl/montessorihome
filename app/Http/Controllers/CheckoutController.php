@@ -100,7 +100,7 @@ class CheckoutController extends Controller
        }
    }
 
-
+   // Get and convert tax, subtotal and total
     private function getNumbers()
     {
         $tax = config('cart.tax') / 100;
