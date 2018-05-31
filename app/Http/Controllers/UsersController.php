@@ -14,35 +14,32 @@ class UsersController extends Controller
       return view('profil');
     }
 
-    public function modify(Request $request) {
+    public function edit()
+    {
       return view('modify-profile');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(ModifyProfileRequest $request)
-    {
-      $profile = User::find(auth()->user()->id);
-      return User::make('users.modify')
-            ->with('user_id', $profile);
-    }
+    public function update(ModifyProfileRequest $request)
+{
 
-    protected function addToUsersTable($request, $error)
-      {
-          // Insert into orders table
-          $user = User::make([
-              'user_id' => auth()->user()->id,
-              'email' => $request->email,
-              'name' => $request->name,
-              'address' => $request->address,
-              'city' => $request->city,
-              'postalcode' => $request->postalcode,
-              'phone' => $request->phone,
-          ]);
-      }
+    $user = User::findOrFail(auth()->user()->id);
+
+    $user->name = $request->get('name');
+
+    $user->email = $request->get('email');
+
+    $user->address = $request->get('address');
+
+    $user->city = $request->get('city');
+
+    $user->postalcode = $request->get('postalcode');
+
+    $user->phone = $request->get('phone');
+
+    $user->save();
+
+    return \Redirect::route('users.index')->with('message', 'Votre profil a bien été modifié');
+
+}
 
 }

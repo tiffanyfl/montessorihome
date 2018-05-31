@@ -69,6 +69,14 @@ a {
   padding-top: 15px;
   color: #fff;
 }
+.footer-txt:last-child {
+  padding-bottom: 15px;
+}
+
+.footer-txt a {
+  color: #fff;
+  text-decoration: none;
+}
 
 .cart-section {
   /*min-height: 100%;*/
@@ -98,7 +106,7 @@ a {
 
 .nav-bar ul li a {
   padding: 15px;
-
+  text-decoration: none;
 }
 .nav-bar ul li a:hover {
   background-color: #93D3D2;
@@ -407,6 +415,24 @@ form .button:hover {
   justify-content: space-evenly;
 }
 
+/* MODIFY PROFILE */
+.modify-profile-form {
+  margin: 5% 10%;
+}
+
+/* PROFIL */
+.container-profil .profil {
+  margin: 5% 5%;
+}
+
+.container-profil .profil p {
+  margin-bottom: 20px;
+}
+
+/* MENTIONS LEGALES */
+.container-mentions-legales {
+  margin-bottom: 30px;
+}
 
 @media screen and (max-width: 768px) {
 
@@ -467,6 +493,10 @@ form .button:hover {
 
   .cart-section .cart-totals .cart-totals-right {
     width: 35%;
+  }
+
+  .cart-section a {
+    text-decoration: none;
   }
 
 

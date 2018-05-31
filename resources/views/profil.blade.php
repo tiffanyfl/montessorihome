@@ -12,6 +12,7 @@
 
 <h1>Bonjour {{ auth()->user()->name }}</h1>
 
+<div class="profil">
 <p><strong>Nom</strong> : {{ auth()->user()->name }}</p>
 <p><strong>Adresse mail</strong> : {{ auth()->user()->email }}</p>
 <p><strong>Adresse</strong> : @if (auth()->user()->address == null) Non indiquée @else {{ auth()->user()->address }} @endif</p>
@@ -20,6 +21,7 @@
 <p><strong>Numéro de téléphone</strong> : @if (auth()->user()->phone == null) Non indiqué @else {{ auth()->user()->phone }} @endif</p>
 
 <a href="{{ route('users.modify') }}" class="btn btn-montessori">Modifier mon profil</a>
+</div>
 </section>
 
 

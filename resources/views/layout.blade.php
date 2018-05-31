@@ -106,6 +106,7 @@
     <footer class="footer">
       <div class="container">
         <div class="col-sm-offset-3 col-sm-6 text-center footer-txt">Montessori Home - 2018</div>
+        <div class="col-sm-offset-3 col-sm-6 text-center footer-txt"><a href="{{ route('mentions-legales') }}">Mentions légales</a> - <a href="{{ route('cgv') }}">Conditions générales de vente</a></div>
       </div>
     </footer>
 

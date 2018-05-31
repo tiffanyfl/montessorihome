@@ -60,5 +60,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profil','UsersController@getInfos')->name('users.index');
-Route::get('/profil/modify','UsersController@modify')->name('users.modify');
-Route::put('/profil/modify','UsersController@edit')->name('users.edit');
+Route::get('/profil/modify','UsersController@edit')->name('users.modify');
+Route::post('/profil/modify','UsersController@update')->name('users.update');
+
+Route::get('/mentions-legales', function() { return view('mentions-legales');})->name('mentions-legales');
+Route::get('/conditions-generales-de-vente', function() { return view('cgv');})->name('cgv');

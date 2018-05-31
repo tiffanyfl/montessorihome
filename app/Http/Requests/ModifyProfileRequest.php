@@ -25,11 +25,11 @@ class ModifyProfileRequest extends FormRequest
     {
         return [
             'email' => 'required|email',
-            'name',
-            'address',
-            'city',
-            'postalcode',
-            'phone',
+            'name' => 'nullable',
+            'address' => 'nullable',
+            'city' => 'nullable',
+            'postalcode' => 'nullable',
+            'phone' => 'nullable',
         ];
     }
 }
