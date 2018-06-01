@@ -269,6 +269,7 @@ ul li a{
 }
 .breadcrumbs-container{
   padding-right: 0;
+  margin-top: 20px;
 }
 
 /*shop page*/
@@ -301,22 +302,25 @@ ul li a{
   flex-wrap: wrap;
 }
 
+
 .list-product {
   justify-content: start;
-}
-
-.list-product figure{
-  margin: 0 10px;
-}
-
-.list-product figcaption a {
-  font-family: 'Quicksand', sans-serif;
-  text-decoration: none;
-}
-
-.list-product figcaption a:hover {
-  color: #89c6c5;
-  text-decoration: none;
+  figure{
+    margin: 0 20px;
+    figcaption {
+      a {
+        font-family: 'Quicksand', sans-serif;
+        text-decoration: none;
+        &:hover{
+          color: #89c6c5;
+          text-decoration: none;
+        }
+      }
+      p{
+        width: 170px;
+      }
+    }
+  }
 }
 
 .container-shop {
@@ -423,6 +427,10 @@ form .button:hover {
 /* MENTIONS LEGALES */
 .container-mentions-legales {
   margin-bottom: 30px;
+
+  p{
+    text-align: justify;
+  }
 }
 
 

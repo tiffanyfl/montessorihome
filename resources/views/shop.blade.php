@@ -50,8 +50,9 @@
                 <img src="{{ productImage($product->image) }}" width="150" height="100" alt="{{ $product->name }}">
             </a>
             <figcaption>
-                <a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a><br>
-                <p>{!! $product->description !!} <br> {{ $product->presentPrice() }}</p>
+                <a href="{{ route('shop.show', $product->slug) }}">{{ $product->name }}</a>
+                <p>{!! str_limit($product->description, 150) !!} </p>
+                <p> {{ $product->presentPrice() }}</p>
             </figcaption>
         </figure>
         @empty
