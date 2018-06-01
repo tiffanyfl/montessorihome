@@ -29,7 +29,7 @@
 
         <div class="product-image-current">
             <h2>{{ $product->name }}</h2>
-            <img src="{{ productImage($product->image) }}" width="250" height="200" alt="{{ $product->name }}" class="active" id="currentImage">
+            <img src="{{ productImage($product->image) }}" width="250" alt="{{ $product->name }}" class="active" id="currentImage">
         </div>
 
         <!-- others images -->

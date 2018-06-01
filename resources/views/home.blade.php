@@ -39,9 +39,6 @@
           margin-bottom: 5vh;
         }
 
-        .concept-img {
-          width: 90%;
-        }
 
         .btn-montessori {
           background-color: #93D3D2;
@@ -146,7 +143,7 @@
           </div>
           <div class="col-xs-12 col-sm-7 col-md-7">
             <h2 class="concept-h2">Le concept</h2>
-            <p class="justify">Montessori Home est une boutique français de matériel et de mobilier destinés à l’aménagement de l’environnement de l’enfant selon les principes de la pédagogie Montessori.
+            <p class="justify">Montessori Home est une boutique française de matériel et de mobilier destinés à l’aménagement de l’environnement de l’enfant selon les principes de la pédagogie Montessori.
               <br>
               Tous nos produits sont de fabrication française conçus pour <strong>accroître l’autonomie de l’enfant</strong> au quotidien et, ce faisant, <strong>renforcer considérablement sa confiance en lui-même</strong>. </p>
             <p class="text-center"><a href="/404" class="btn btn-montessori">Lien Ulule</a></p>

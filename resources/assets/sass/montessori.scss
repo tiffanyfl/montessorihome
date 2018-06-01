@@ -37,7 +37,7 @@ a {
 }
 
 .concept-img {
-  width: 90%;
+  width: 65%;
 }
 
 .btn-montessori {
@@ -238,10 +238,11 @@ a {
 .fil, .also-like-product{
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .also-like-product{
-  justify-content: space-around;
+
   figure {
     margin: 0 20px;
   }
@@ -297,6 +298,11 @@ ul li a{
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.list-product {
+  justify-content: start;
 }
 
 .list-product figure{
@@ -320,7 +326,7 @@ ul li a{
 /*product page*/
 .view-product, .product-image {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-flow: row wrap;
 }
@@ -380,10 +386,14 @@ form .button:hover {
 /*search-result*/
 .search-product-result{
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-flow: row wrap;
   align-items: flex-start;
   margin-top: 40px;
+
+  figure {
+    margin: 5px 30px;
+  }
 }
 
 /*404*/

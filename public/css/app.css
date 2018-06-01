@@ -8567,7 +8567,7 @@ a {
 }
 
 .concept-img {
-  width: 90%;
+  width: 65%;
 }
 
 .btn-montessori {
@@ -8797,11 +8797,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-.also-like-product {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .also-like-product figure {
@@ -8891,6 +8889,14 @@ ul li a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.list-product {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .list-product figure {
@@ -8918,8 +8924,9 @@ ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -9002,9 +9009,9 @@ form .button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -9013,6 +9020,10 @@ form .button:hover {
       -ms-flex-align: start;
           align-items: flex-start;
   margin-top: 40px;
+}
+
+.search-product-result figure {
+  margin: 5px 30px;
 }
 
 /*404*/

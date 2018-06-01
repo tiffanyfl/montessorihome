@@ -33,17 +33,29 @@
                     </div>
                     <div class="form-group">
                         <label for="name">Nom</label>
+                        @if (auth()->user())
+                            <input type="text" class="form-control" id="name" name="name" value="{{ auth()->user()->name }}" required>
+                        @else
                         <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" required>
+                        @endif
                     </div>
                     <div class="form-group">
                         <label for="address">Adresse</label>
+                        @if (auth()->user())
+                            <input type="text" class="form-control" id="address" name="address" value="{{ auth()->user()->address }}" required>
+                        @else
                         <input type="text" class="form-control" id="address" name="address" value="{{ old('address') }}" required>
+                        @endif
                     </div>
 
                     <div class="half-form">
                         <div class="form-group">
                             <label for="city">Ville</label>
+                            @if (auth()->user())
+                                <input type="text" class="form-control" id="city" name="city" value="{{ auth()->user()->city }}" required>
+                            @else
                             <input type="text" class="form-control" id="city" name="city" value="{{ old('city') }}" required>
+                            @endif
                         </div>
                         <!--<div class="form-group">
                             <label for="province">Province</label>
@@ -54,11 +66,19 @@
                     <div class="half-form">
                         <div class="form-group">
                             <label for="postalcode">Code postal</label>
+                            @if (auth()->user())
+                                <input type="text" class="form-control" id="postalcode" name="postalcode" value="{{ auth()->user()->postalcode }}" required>
+                            @else
                             <input type="text" class="form-control" id="postalcode" name="postalcode" value="{{ old('postalcode') }}" required>
+                            @endif
                         </div>
                         <div class="form-group">
                             <label for="phone">Téléphone</label>
+                            @if (auth()->user())
+                                <input type="text" class="form-control" id="phone" name="phone" value="{{ auth()->user()->phone }}" required>
+                            @else
                             <input type="text" class="form-control" id="phone" name="phone" value="{{ old('phone') }}" required>
+                            @endif
                         </div>
                     </div> <!-- end half-form -->
 
