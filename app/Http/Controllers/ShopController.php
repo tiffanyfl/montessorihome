@@ -15,7 +15,7 @@ class ShopController extends Controller
      */
     public function index()
     {
-        $pagination = 3;
+        $pagination = 6;
         $groups = Group::all();
 
         if(request()->group){
@@ -30,7 +30,7 @@ class ShopController extends Controller
             $groupName = 'Tous les produits';
         }
 
-        //By order
+        //display products by order asc or desc
         if(request()->sort == 'low_high'){
             $products = $products->orderBy('price')->paginate($pagination);
         }elseif(request()->sort == 'high_low'){
@@ -71,22 +71,26 @@ class ShopController extends Controller
      */
     public function show($slug)
     {
-        $product = Product::where('slug', $slug)->firstOrFail();
+      //show details product
+      $product = Product::where('slug', $slug)->firstOrFail();
+      $mightAlsoLike = Product::where('slug', '!=', $slug)->inRandomOrder()->take(4)->get();
 
-        $mightAlsoLike = Product::where('slug', '!=', $slug)->inRandomOrder()->take(4)->get();
-
-        return view('product', compact(['product', 'mightAlsoLike']));
+      return view('product', compact(['product', 'mightAlsoLike']));
     }
 
-    //search product
+
     public function search(Request $request)
     {
+      //search product with condition
+      $messages = [
+        'min' => 'Le nom du produit requiert plus de 3 lettres !',
+        'required' => 'Vous avez saisi aucun produit !'
+      ];
       $this->validate($request,[
           'query' => 'required|min:3',
-      ]);
+      ],$messages);
 
       $query = $request->input('query');
-
       $products = Product::search($query)->paginate(10);
 
       return view('search-results', compact('products'));

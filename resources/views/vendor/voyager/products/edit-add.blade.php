@@ -68,11 +68,11 @@
                                 @endif
                             @endforeach
                             <!-- choose groups for products -->
-                            <div class="form-group">
+                            <div class="choice-groups form-group">
                               <label>Group</label>
-                              <ul>
+                              <ul style="list-style-type: none; padding-left: 0">
                               @foreach($allGroups as $group)
-                              <li><label><input value="{{ $group->id }}" type="checkbox" name="group[]" {{ $groupsForProduct->contains($group) ? 'checked' : '' }}>{{ $group->name }}</label></li>
+                              <li><label><input value="{{ $group->id }}" type="checkbox" name="group[]" style="margin-right: 5px;" {{ $groupsForProduct->contains($group) ? 'checked' : '' }}>{{ $group->name }}</label></li>
                               @endforeach
                               </ul>
                           </div>

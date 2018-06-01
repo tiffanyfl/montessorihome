@@ -8,26 +8,11 @@
 
 @section('content')
 
-<!-- if there's a error -->
-<div class="container">
-@if (session()->has('success_message'))
-    <div class="alert alert-success">
-        {{ session()->get('success_message') }}
-    </div>
-@endif
-
-@if(count($errors) > 0)
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-</div>
 
 <div class="view-product container">
+
+  <!-- if there's a error -->
+  @include('partials.alert')
 
   @component('components.breadcrumbs')
   <a href="/">Accueil</a>
@@ -35,7 +20,7 @@
   <a href="{{ route('shop.index') }}">Boutique</a>
   <i class="fa fa-chevron-right breadcrumb-separator"></i>
   <span>{{ $product->name }}</span>
-  @endcomponent
+  @endcomponent<!-- end breadcrumbs -->
 
     <!-- main image -->
     <div class="product-image">

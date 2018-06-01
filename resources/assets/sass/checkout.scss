@@ -5,8 +5,6 @@ h1.checkout-heading {
 .checkout-section {
   display: grid;
   grid-template-columns: 6fr 1fr;
-  // grid-column-gap: 10px;
-  //grid-gap: 30px;
   margin: 0 auto 80px;
   width: 100%;
 }
@@ -14,10 +12,6 @@ h1.checkout-heading {
 .container-checkout {
   display: flex;
 }
-
-  .checkout-table-container {
-    //margin-left: 124px;
-  }
 
   h2 {
     margin-bottom: 28px;
@@ -46,13 +40,7 @@ h1.checkout-heading {
       width: 75%;
     }
 
-    .checkout-table-row-right {
-      // width: 24%;
-      // padding-top: 10px;
-    }
-
     .checkout-table-row-left .checkout-table-img {
-      //max-height: 60px;
       width: 50%;
     }
 
@@ -90,7 +78,6 @@ h1.checkout-heading {
     }
 
   .have-code {
-    /*display: block;*/
     display: none;
     margin: 14px 0;
   }
@@ -135,10 +122,6 @@ h1.checkout-heading {
   padding: 16px 16px;
   border: 1px solid #ccc;
 
-}
-
-.StripeElement--focus {
-  // box-shadow: 0 1px 3px 0 #cfd7df;
 }
 
 .StripeElement--invalid {

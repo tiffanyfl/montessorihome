@@ -21,7 +21,7 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-
+//cart
 Route::get('/cart', 'CartController@index')->name('cart.index');
 Route::post('/cart', 'CartController@store')->name('cart.store');
 Route::patch('/cart/{product}', 'CartController@update')->name('cart.update');
@@ -44,7 +44,7 @@ Route::post('/checkout', 'CheckoutController@store')->name('checkout.store');
 
 Route::get('/thankyou', 'ConfirmationController@index')->name('confirmation.index');
 
-//products' part
+//products
 Route::get('/shop', 'ShopController@index')->name('shop.index');
 
 Route::get('/shop/{product}', 'ShopController@show')->name('shop.show');
@@ -55,9 +55,8 @@ Route::get('/404', function () {
     return view('404');
 });
 
+//profil
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/profil','UsersController@getInfos')->name('users.index');
 Route::get('/profil/modify','UsersController@edit')->name('users.modify');

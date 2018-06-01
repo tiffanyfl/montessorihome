@@ -30,7 +30,7 @@ class MailNewsletter extends Mailable
     public function build()
     {
         return $this->view('email_contact')->with([
-                        'email' => $this->request->email,
-                    ]);;
+          'email' => $this->request->email,
+        ]);;
     }
 }

@@ -8537,7 +8537,6 @@ textarea {
 body {
   font-family: 'Muli', sans-serif;
   margin: 0 auto;
-  /*position: relative;*/
   height: 100%;
   display: table;
   padding: 0;
@@ -8560,7 +8559,6 @@ a {
 .logo {
   margin-top: 2vh;
   margin-bottom: 5vh;
-  /*width: 22%;*/
   width: 125px;
 }
 
@@ -8589,7 +8587,6 @@ a {
 .footer {
   background-color: #93D3D2;
   position: static;
-  /*bottom: 0;*/
   width: 100%;
   height: 60px;
   display: table-row;
@@ -8610,16 +8607,9 @@ a {
 }
 
 .cart-section {
-  /*min-height: 100%;*/
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-}
-
-#page {
-  /*min-height:100%; /* 1 */
-  /*  display:flex; /* 2 */
-  /*flex-direction:column; /* 3 */
 }
 
 .nav-bar {
@@ -8667,7 +8657,6 @@ a {
   right: 10px;
   bottom: 0;
   width: 44px;
-  /*height: 100%;*/
   height: 200px;
   margin-right: 10px;
 }
@@ -8693,7 +8682,6 @@ a {
   transition: top .5s, bottom .5s, opacity .2s, -webkit-transform .5s;
   transition: transform .5s, top .5s, bottom .5s, opacity .2s;
   transition: transform .5s, top .5s, bottom .5s, opacity .2s, -webkit-transform .5s;
-  /*transition: transform 4s, top 4s, bottom 4s, opacity 4s;*/
   opacity: 1;
 }
 
@@ -8706,7 +8694,6 @@ a {
 }
 
 .menu--toggler__label__burger span:nth-child(3) {
-  /*bottom: 5px;*/
   top: 25px;
 }
 
@@ -9034,14 +9021,6 @@ form .button:hover {
   min-height: 58vh;
 }
 
-/*LOGIN & REGISTER*/
-
-.container-login,
-.container-register {
-  /*min-height: 58vh;
-  min-height: 74vh;*/
-}
-
 /* CART */
 
 .cart-totals-right {
@@ -9086,7 +9065,6 @@ form .button:hover {
   }
 
   .order-product {
-    /*margin-top: 50px;*/
     margin-bottom: 20px;
   }
 }
@@ -9124,7 +9102,6 @@ form .button:hover {
 
   .footer {
     position: relative;
-    /*bottom: 0;*/
   }
 
   /*CART*/
@@ -9164,7 +9141,6 @@ form .button:hover {
             flex-direction: column;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    /*margin-bottom: 0;*/
     margin-bottom: 40px;
   }
 
@@ -9304,7 +9280,6 @@ h2 {
 }
 
 .have-code {
-  /*display: block;*/
   display: none;
   margin: 14px 0;
 }

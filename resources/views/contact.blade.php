@@ -1,4 +1,4 @@
-@extends('template')
+@extends('home')
 @section('formnewletter')
   {!! Form::open(['url' => '/']) !!}
     <div class="form-group form-inline text-center{!! $errors->has('email') ? 'has-error' : '' !!}">

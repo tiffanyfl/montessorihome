@@ -11,23 +11,7 @@
 <section class="container container-shop">
 
   <!-- if there's a error -->
-  <div class="container">
-  @if (session()->has('success_message'))
-      <div class="alert alert-success">
-          {{ session()->get('success_message') }}
-      </div>
-  @endif
-
-  @if(count($errors) > 0)
-      <div class="alert alert-danger">
-          <ul>
-              @foreach ($errors->all() as $error)
-                  <li>{{ $error }}</li>
-              @endforeach
-          </ul>
-      </div>
-  @endif
-  </div>
+  @include('partials.alert')
 
   @component('components.breadcrumbs')
   <a href="/">Accueil</a>
@@ -39,6 +23,7 @@
     <div class="col-sm-3 category-product">
         <h2>Par Catégorie</h2>
         <ul>
+          <li><a href="{{ route('shop.index') }}">Toutes les catégories</a></li>
             @foreach($groups as $group)
             <li><a href="{{ route('shop.index', ['group' => $group->slug]) }}">{{ $group->name }}</a></li>
             @endforeach
@@ -62,7 +47,6 @@
         @forelse($products as $product)
         <figure>
             <a href="{{ route('shop.show', $product->slug) }}">
-<!--                <img src="{{ asset('storage/'.$product->image) }}" width="150" height="100" alt="{{ $product->name }}">-->
                 <img src="{{ productImage($product->image) }}" width="150" height="100" alt="{{ $product->name }}">
             </a>
             <figcaption>
@@ -75,13 +59,13 @@
         @endforelse
         </div>
 
+        <!-- pagination -->
+        <div class="text-center">
+            {{ $products->appends(request()->input())->links() }}
+        </div>
+
     </div>
 
-
-    <!-- pagination -->
-    <div class="text-center">
-        {{ $products->appends(request()->input())->links() }}
-    </div>
   </section>
 
 
